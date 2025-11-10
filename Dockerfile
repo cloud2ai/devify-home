@@ -19,6 +19,9 @@ RUN npm run docs:build
 # Production stage - nginx
 FROM nginx:alpine
 
+# Remove default nginx index.html
+RUN rm -f /usr/share/nginx/html/index.html
+
 # Copy built files from builder
 COPY --from=builder /app/docs/.vitepress/dist /usr/share/nginx/html
 
