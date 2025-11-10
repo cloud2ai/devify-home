@@ -4,24 +4,34 @@
 
 The `nginx.conf` file is configured to handle VitePress multilingual sites automatically.
 
-### Default Language Configuration
+### Language Handling 🌍
 
-The default language is set in the root redirect:
+**Default Language Redirect:**
+- Root path (`/`) redirects to Chinese (`/zh/`)
+- Simple, reliable, no complex detection logic
 
+**VitePress Language Selector:**
+- VitePress automatically shows language switcher in navigation
+- Users can easily switch between languages
+- **Choice is saved in browser localStorage**
+- Next visit automatically uses saved preference
+
+**How it works:**
+1. First visit → Redirects to `/zh/` (default)
+2. User switches to English via language selector
+3. VitePress saves choice in localStorage
+4. Next visit → Automatically shows English!
+
+**Want true auto-detection?**
+See `LANGUAGE_DETECTION.md` for VitePress native language detection setup.
+
+**Changing default language:**
 ```nginx
+# In nginx.conf
 location = / {
-    return 302 /zh/;  # Change /zh/ to your default language
+    return 302 /en/;  # Change to /en/, /ja/, etc.
 }
 ```
-
-**Supported language codes:**
-- `/zh/` - Chinese (中文)
-- `/en/` - English
-- `/ja/` - Japanese (日本語)
-- `/ko/` - Korean (한국어)
-- `/es/` - Spanish (Español)
-- `/fr/` - French (Français)
-- ... or any other language code
 
 ### Adding New Languages
 
@@ -83,11 +93,17 @@ docker build -t devify-home-test .
 # Run the container
 docker run -d -p 8080:80 devify-home-test
 
-# Test different languages
+# Test default redirect
 curl -I http://localhost:8080/          # Should redirect to /zh/
+
+# Test language pages
 curl http://localhost:8080/zh/          # Chinese content
 curl http://localhost:8080/en/          # English content
-curl http://localhost:8080/ja/          # Japanese content (if configured)
+
+# Test in browser
+# Open http://localhost:8080/
+# Use VitePress language selector to switch languages
+# Reload page - your choice is remembered!
 ```
 
 ## Dockerfile
@@ -99,4 +115,3 @@ RUN rm -f /usr/share/nginx/html/index.html
 ```
 
 This ensures VitePress content is always served, not Nginx defaults.
-
