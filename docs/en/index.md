@@ -19,8 +19,8 @@ const heroData = {
   primaryButtonLink: 'https://app.aimychats.com/register',
   secondaryButtonText: 'Learn More',
   secondaryButtonLink: '/en/#features',
-  imageSrc: '/images/dashboard-screenshot.png',
-  imageAlt: 'AImyChats product screenshot',
+  imageSrc: '/images/dashboard-list-en.png',
+  imageAlt: 'AImyChats product screenshot - List view',
   features: [
     'AI Image Recognition',
     'Multi-Scenario Analysis',

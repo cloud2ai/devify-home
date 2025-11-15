@@ -19,8 +19,8 @@ const heroData = {
   primaryButtonLink: 'https://app.aimychats.com/register',
   secondaryButtonText: '查看功能',
   secondaryButtonLink: '/zh/#features',
-  imageSrc: '/images/dashboard-screenshot.png',
-  imageAlt: 'AImyChats 产品截图',
+  imageSrc: '/images/dashboard-list-zh.png',
+  imageAlt: 'AImyChats 产品截图 - 列表页面',
   features: [
     'AI 图片识别',
     '多场景智能分析',
