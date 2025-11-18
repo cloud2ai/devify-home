@@ -58,8 +58,12 @@ const props = defineProps({
   slides: {
     type: Array,
     required: true,
+    default: () => [],
     validator: (slides) => {
-      return slides.every(slide => slide.image && slide.alt)
+      if (!Array.isArray(slides) || slides.length === 0) {
+        return true
+      }
+      return slides.every(slide => slide && slide.image && slide.alt)
     }
   },
   autoplay: {
@@ -80,6 +84,7 @@ const currentIndex = ref(0)
 let autoplayTimer = null
 
 const nextSlide = () => {
+  if (!props.slides || props.slides.length === 0) return
   if (props.loop) {
     currentIndex.value = (currentIndex.value + 1) % props.slides.length
   } else {
@@ -89,6 +94,7 @@ const nextSlide = () => {
 }
 
 const previousSlide = () => {
+  if (!props.slides || props.slides.length === 0) return
   if (props.loop) {
     currentIndex.value = (currentIndex.value - 1 + props.slides.length) % props.slides.length
   } else {

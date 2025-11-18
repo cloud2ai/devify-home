@@ -63,7 +63,17 @@
 import { ref, computed, onMounted, onUnmounted } from 'vue'
 import { useData } from 'vitepress'
 
-const { path } = useData()
+// Safely get path from useData
+let path = ref('/')
+try {
+  const data = useData()
+  if (data && data.path && typeof data.path === 'object' && 'value' in data.path) {
+    path = data.path
+  }
+} catch (e) {
+  // Fallback if useData fails - path already initialized to '/'
+}
+
 const isOpen = ref(false)
 const dropdownRef = ref(null)
 
@@ -75,28 +85,41 @@ const languages = [
 const currentLang = computed(() => {
   // Use path to determine current language (most reliable)
   // path.value will be like '/zh/' or '/en/' or '/zh/guide/...' or '/en/guide/...'
-  if (!path || !path.value) {
-    // Fallback: use window.location if path is not available
-    if (typeof window !== 'undefined') {
-      const currentPath = window.location.pathname
-      if (currentPath.startsWith('/en')) {
-        return 'en-US'
-      }
+  try {
+    if (!path) {
+      return 'zh-CN'
     }
+
+    // Check if path is a ref object with value property
+    if (typeof path !== 'object' || path === null) {
+      return 'zh-CN'
+    }
+
+    // Safely access path.value
+    const currentPath = (path && typeof path.value !== 'undefined') ? path.value : ''
+    if (!currentPath || typeof currentPath !== 'string') {
+      return 'zh-CN'
+    }
+
+    if (currentPath.startsWith('/en')) {
+      return 'en-US'
+    }
+    // Default to Chinese (zh-CN) for '/zh' paths or root locale
+    return 'zh-CN'
+  } catch (e) {
+    // Fallback to Chinese if any error occurs
     return 'zh-CN'
   }
-
-  const currentPath = path.value
-  if (typeof currentPath === 'string' && currentPath.startsWith('/en')) {
-    return 'en-US'
-  }
-  // Default to Chinese (zh-CN) for '/zh' paths or root locale
-  return 'zh-CN'
 })
 
 const currentFlag = computed(() => {
-  const foundLang = languages.find(l => l.code === currentLang.value)
-  return foundLang ? foundLang.flag : '🌐'
+  try {
+    const langCode = currentLang?.value || 'zh-CN'
+    const foundLang = languages.find(l => l.code === langCode)
+    return foundLang ? foundLang.flag : '🌐'
+  } catch (e) {
+    return '🌐'
+  }
 })
 
 const toggleDropdown = () => {

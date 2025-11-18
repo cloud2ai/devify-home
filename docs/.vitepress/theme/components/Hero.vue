@@ -207,9 +207,9 @@ const formattedTitle = computed(() => {
 
 // Format subtitle - remove the process flow part
 const formattedSubtitle = computed(() => {
-  const subtitle = props.subtitle
+  const subtitle = props.subtitle || ''
   // Remove the process flow part "选择 → 转发 → 轻松完成！" from subtitle
-  if (subtitle.includes('选择 → 转发 → 轻松完成！')) {
+  if (subtitle && subtitle.includes('选择 → 转发 → 轻松完成！')) {
     return subtitle.replace(/\s*选择 → 转发 → 轻松完成！\s*/, '')
   }
   return subtitle
@@ -217,9 +217,9 @@ const formattedSubtitle = computed(() => {
 
 // Format process flow - extract and format the process flow part
 const formattedProcessFlow = computed(() => {
-  const subtitle = props.subtitle
+  const subtitle = props.subtitle || ''
   // Extract the process flow part "选择 → 转发 → 轻松完成！"
-  if (subtitle.includes('选择 → 转发 → 轻松完成！')) {
+  if (subtitle && subtitle.includes('选择 → 转发 → 轻松完成！')) {
     const processMatch = subtitle.match(/选择 → 转发 → 轻松完成！/)
     if (processMatch) {
       return processMatch[0]

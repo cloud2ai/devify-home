@@ -100,7 +100,17 @@
 import { computed, ref, onMounted } from 'vue'
 import { useData } from 'vitepress'
 
-const { path, localePath } = useData()
+let path = ref('')
+let localePath = ref('')
+try {
+  const data = useData()
+  if (data) {
+    path = data.path || ref('')
+    localePath = data.localePath || ref('')
+  }
+} catch (e) {
+  // Fallback if useData fails
+}
 
 const isChinese = computed(() => {
   // Check window.location first (most reliable in browser)
@@ -115,12 +125,21 @@ const isChinese = computed(() => {
   }
 
   // Fallback to path from useData
-  const currentPath = path.value || ''
-  if (currentPath.startsWith('/zh')) {
-    return true
-  }
-  if (currentPath.startsWith('/en')) {
-    return false
+  try {
+    if (!path || typeof path !== 'object' || path === null) {
+      return true
+    }
+    const currentPath = (typeof path.value !== 'undefined') ? path.value : ''
+    if (currentPath && typeof currentPath === 'string') {
+      if (currentPath.startsWith('/zh')) {
+        return true
+      }
+      if (currentPath.startsWith('/en')) {
+        return false
+      }
+    }
+  } catch (e) {
+    // Ignore errors
   }
 
   // Default to Chinese for root locale
