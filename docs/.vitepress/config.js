@@ -6,6 +6,35 @@ export default defineConfig({
 
   locales: {
     root: {
+      label: 'English',
+      lang: 'en-US',
+      title: 'AImyChats',
+      description: 'AI-Powered Conversation Hub',
+      themeConfig: {
+        nav: [
+          { text: 'Home', link: '/' },
+          { text: 'Features', link: '/#features' },
+          { text: 'Pricing', link: '/#pricing' },
+          { text: 'Help', link: '/en/faq' }
+        ],
+        sidebar: {
+          '/en/guide/': [
+            {
+              text: 'Guide',
+              items: [
+                { text: 'Getting Started', link: '/en/guide/getting-started' },
+                { text: 'Integrations', link: '/en/guide/integrations' }
+              ]
+            }
+          ]
+        },
+        footer: {
+          message: '',
+          copyright: ''
+        }
+      }
+    },
+    zh: {
       label: '中文',
       lang: 'zh-CN',
       title: 'AImyChats',
@@ -24,35 +53,6 @@ export default defineConfig({
               items: [
                 { text: '微信备份', link: '/zh/guide/wechat-backup' },
                 { text: '功能说明', link: '/zh/guide/features' }
-              ]
-            }
-          ]
-        },
-        footer: {
-          message: '',
-          copyright: ''
-        }
-      }
-    },
-    en: {
-      label: 'English',
-      lang: 'en-US',
-      title: 'AImyChats',
-      description: 'AI-Powered Conversation Hub',
-      themeConfig: {
-        nav: [
-          { text: 'Home', link: '/en/' },
-          { text: 'Features', link: '/en/#features' },
-          { text: 'Pricing', link: '/en/#pricing' },
-          { text: 'Help', link: '/en/faq' }
-        ],
-        sidebar: {
-          '/en/guide/': [
-            {
-              text: 'Guide',
-              items: [
-                { text: 'Getting Started', link: '/en/guide/getting-started' },
-                { text: 'Integrations', link: '/en/guide/integrations' }
               ]
             }
           ]

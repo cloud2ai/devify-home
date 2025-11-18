@@ -13,6 +13,7 @@ import Footer from '../.vitepress/theme/components/Footer.vue'
 const heroData = {
   badge: '统一管理 · 智能归类 · 秒速查找',
   title: '聊天记录 AI 智能助手',
+  subtitle: '统一管理微信、邮件、WhatsApp聊天记录，AI智能识别图片内容并自动归类，选择转发即可轻松完成',
   points: [
     {
       icon: 'unified',
@@ -40,13 +41,15 @@ const heroData = {
       image: '/images/dashboard-list-zh.png',
       alt: 'AImyChats 产品截图 - 列表页面',
       title: '统一管理所有对话',
-      description: '微信、邮件、WhatsApp 聊天记录集中展示，一目了然，智能检索也在这个页面'
+      description: '微信、邮件、WhatsApp 聊天记录集中展示，一目了然，智能检索也在这个页面',
+      highlights: ['统一管理', '秒速查找']
     },
     {
       image: '/images/detailed-zh.png',
       alt: 'AImyChats 产品截图 - 详细页面',
       title: '对话智能信息展示',
-      description: 'AI智能总结, 原始对话参考含图片,附件信息展示'
+      description: '统一管理微信、邮件、WhatsApp聊天记录，AI智能识别图片内容并自动归类，选择转发即可轻松完成',
+      highlights: []
     }
   ],
   imageSrc: '/images/dashboard-list-zh.png',
