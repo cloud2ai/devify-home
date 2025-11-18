@@ -8,72 +8,97 @@ import Features from '../.vitepress/theme/components/Features.vue'
 import HowItWorks from '../.vitepress/theme/components/HowItWorks.vue'
 import UseCases from '../.vitepress/theme/components/UseCases.vue'
 import Pricing from '../.vitepress/theme/components/Pricing.vue'
-import PricingComparison from '../.vitepress/theme/components/PricingComparison.vue'
 import Footer from '../.vitepress/theme/components/Footer.vue'
 
 const heroData = {
-  badge: 'Image Recognition · Multi-Scenario AI',
+  badge: 'Unified Management · Smart Organization · Instant Search',
   title: 'AI Chat History Assistant',
-  subtitle: 'Save WeChat, Email, WhatsApp conversations forever. AI recognizes images + multi-scenario analysis. Work, Support, Product... precise understanding for different scenarios!',
+  points: [
+    {
+      icon: 'unified',
+      text: 'Unified management for WeChat, Email, WhatsApp conversations'
+    },
+    {
+      icon: 'ai',
+      text: 'AI recognizes image content + intelligent analysis and categorization'
+    },
+    {
+      icon: 'search',
+      text: 'Find historical conversations instantly'
+    },
+    {
+      icon: 'process',
+      text: 'Select → Forward → Done!'
+    }
+  ],
   primaryButtonText: 'Get Started',
   primaryButtonLink: 'https://app.aimychats.com/register',
-  secondaryButtonText: 'Learn More',
+  secondaryButtonText: 'View Features',
   secondaryButtonLink: '/en/#features',
+  carouselSlides: [
+    {
+      image: '/images/dashboard-list-en.png',
+      alt: 'AImyChats product screenshot - List view',
+      title: 'Unified Conversation Management',
+      description: 'WeChat, Email, WhatsApp conversations all in one place, smart search also available on this page'
+    },
+    {
+      image: '/images/detailed-en.png',
+      alt: 'AImyChats product screenshot - Detailed view',
+      title: 'Conversation Intelligent Information Display',
+      description: 'AI intelligent summary, original conversation reference including images, attachment information display'
+    }
+  ],
   imageSrc: '/images/dashboard-list-en.png',
   imageAlt: 'AImyChats product screenshot - List view',
-  features: [
-    'AI Image Recognition',
-    'Multi-Scenario Analysis',
-    'Permanent Storage',
-    'Smart Search'
-  ]
+  features: []
 }
 
 const howItWorksData = {
   title: 'Get Started in 3 Simple Steps',
-  subtitle: 'No complex setup required, start in minutes',
+  subtitle: 'No complex configuration required, get started in minutes',
   steps: [
     {
       icon: 'email',
       title: 'Forward Chat History',
-      description: 'Forward WeChat, email, or any chat history to your dedicated AI inbox. System auto-receives and processes.'
+      description: 'Forward WeChat, email, or any chat history to your dedicated AI inbox. The system automatically receives and processes it.'
     },
     {
       icon: 'ai',
-      title: 'AI Multi-Scenario Analysis',
-      description: 'AI recognizes image content (screenshots, charts, photos) and analyzes based on scenario (work, support, product, etc.). Different scenarios, different focus, more precise understanding!'
+      title: 'AI Intelligent Analysis',
+      description: 'AI automatically extracts key information, generates summaries, and identifies important points to help you quickly understand conversation content and action items.'
     },
     {
       icon: 'dashboard',
       title: 'Permanent Storage & Review',
-      description: 'All chat history saved permanently in cloud. Search and review anytime. Never worry about losing records!'
+      description: 'All chat history is permanently saved in the cloud. Search and review anytime. Never worry about losing records or expiration!'
     }
   ]
 }
 
 const featuresData = {
-  title: 'Solving Chat History Pain Points',
-  subtitle: 'Image Recognition + Multi-Scenario AI, Smarter Than Generic Summaries',
+  title: 'Make Chat History Clear Again',
+  subtitle: 'Unified Cross-Platform Management · Intelligent Text & Image Understanding',
   features: [
     {
-      icon: 'ai',
-      title: 'Multi-Scenario Smart Analysis',
-      description: 'Work communication, customer support, product discussion... Select conversation scenario for AI targeted analysis. Support scenario extracts key issues, Product scenario identifies requirement details - smarter and more precise!'
-    },
-    {
-      icon: 'image',
-      title: 'AI Image Recognition + Text+Image Combined',
-      description: 'Screenshots, photos, charts in chats... AI automatically recognizes image content and analyzes with text together. Product screenshots, data charts, requirement docs - all accurately understood!'
-    },
-    {
       icon: 'backup',
-      title: 'Chat History Never Lost',
-      description: 'Lost WeChat history after phone change? Expired images won\'t display? Forward to AImyChats - text+images permanently saved in cloud, review anytime.'
+      title: 'All Conversations in One Place',
+      description: 'WeChat, email, customer service messages... No longer scattered everywhere. One-click forwarding automatically organizes and categorizes. All communications finally return to the same space.'
     },
     {
       icon: 'search',
-      title: 'Instant History Search',
-      description: 'Remember chatting but can\'t find it? Powerful AI searches image content, text, and scenario categories, instantly locates any historical conversation.'
+      title: 'Find What You Need Instantly',
+      description: 'Not just ordinary search. It\'s multi-dimensional retrieval based on text, images, contacts, and scenarios. So fast it feels like jumping directly to the line you want to see.'
+    },
+    {
+      icon: 'image',
+      title: 'Understands Both Text and Images',
+      description: 'Screenshots, data charts, UI designs, tables, photos. AI understands it all. Combined text and image understanding makes every summary more complete and reliable.'
+    },
+    {
+      icon: 'backup',
+      title: 'Always Saved, Never Lost',
+      description: 'Changing phones, clearing cache, expired images are no longer problems. Your chat history is continuously saved in the cloud. Access it anytime, anywhere.'
     }
   ]
 }
@@ -83,47 +108,75 @@ const useCasesData = {
   subtitle: 'If you have important conversations to save and manage, AImyChats is your best choice',
   useCases: [
     {
-      icon: 'personal',
-      title: 'Professionals - Work Chats Never Lost',
-      description: 'Client requirements, boss instructions, colleague exchanges... Save important work conversations easily. AI extracts key info and action items.',
-      benefits: [
-        'Client communications preserved',
-        'Work instructions reviewable anytime',
-        'AI extracts action items',
-        'Important decisions never missed'
-      ]
-    },
-    {
-      icon: 'business',
-      title: 'Entrepreneurs - Business Dealings Clear',
-      description: 'Partner communications, business negotiations, project details - all key conversations permanently saved for quick reference when needed.',
-      benefits: [
-        'Business negotiation records saved',
-        'Contract details readily accessible',
-        'Project communication history traceable',
-        'AI extracts key terms'
-      ]
-    },
-    {
       icon: 'team',
-      title: 'Team Managers - Collaboration Clear',
-      description: 'Team discussions, task assignments, progress feedback - AI auto-organizes key information for more efficient team collaboration.',
+      role: 'Enterprise Executives',
+      subtitle: 'Large amounts of information need quick review',
+      description: 'Project communications, decision backgrounds, team discussions. AI automatically organizes key information to make decisions more efficient.',
       benefits: [
-        'Team discussions auto-archived',
-        'Task assignments clearly queryable',
-        'Progress updates tracked in real-time',
-        'AI generates meeting minutes'
+        'Automatic project communication archiving',
+        'Multi-scenario AI analysis (Work / Product / Project)',
+        'Important decisions permanently saved',
+        'Quick traceability of decision basis'
       ]
     },
     {
-      icon: 'support',
-      title: 'Freelancers - Client Needs Precisely Recorded',
-      description: 'Client requirements, project details, revision feedback - all communication records permanently saved to avoid omissions and disputes.',
+      icon: 'lawyer',
+      role: 'Lawyers',
+      subtitle: 'Every communication is key evidence',
+      description: 'Contracts, client consultations, evidence scattered across platforms. AI automatically structures and organizes to quickly find key content.',
       benefits: [
-        'Client requirements fully recorded',
-        'Project details reviewable anytime',
-        'Revision history clearly queryable',
-        'AI organizes key requirements'
+        'Multi-platform conversation archiving',
+        'Combined text and image evidence understanding',
+        'Key clauses automatically extracted',
+        'Permanently searchable historical records'
+      ]
+    },
+    {
+      icon: 'doctor',
+      role: 'Doctors',
+      subtitle: 'Fragmented patient communications no longer missed',
+      description: 'Patient screenshots, test reports, conversation notes scattered. AI automatically summarizes and organizes for more accurate patient tracking.',
+      benefits: [
+        'Automatic test report/prescription recognition',
+        'Patient communications permanently preserved',
+        'Key symptoms automatically extracted',
+        'Quick search of patient history'
+      ]
+    },
+    {
+      icon: 'finance',
+      role: 'Financial Advisors',
+      subtitle: 'Clear boundaries in client communications',
+      description: 'Every communication may affect trust or performance. AI helps you record, organize, and trace history.',
+      benefits: [
+        'Unified multi-platform communication management',
+        'Clear recording of needs and commitments',
+        'Image and text recognition restores client intent',
+        'Traceable communication history'
+      ]
+    },
+    {
+      icon: 'sales',
+      role: 'Account Managers',
+      subtitle: 'Easy management of frequent client communications',
+      description: 'Multi-platform client communications easily miss details. AI automatically organizes summaries and action items.',
+      benefits: [
+        'Client needs automatically extracted',
+        'Image + text understanding',
+        'Instant location of historical communications',
+        'One-click sales summary generation'
+      ]
+    },
+    {
+      icon: 'consultant',
+      role: 'Psychotherapists',
+      subtitle: 'Complete client history tracking',
+      description: 'Communication content needs structured preservation for review and long-term tracking.',
+      benefits: [
+        'Automatic multi-channel communication saving',
+        'AI automatically organizes key points and goals',
+        'Easy long-term tracking management',
+        'Historical records accessible anytime'
       ]
     }
   ]
@@ -135,110 +188,97 @@ const pricingData = {
   featuredLabel: 'Best Value',
   plans: [
     {
-      name: 'Free',
-      description: 'Free trial experience',
+      name: 'Free Trial',
+      description: ' ',
       price: '$0',
       period: '/month',
       buttonText: 'Get Started',
       buttonLink: 'https://app.aimychats.com/register',
       features: [
-        '5 emails per month',
-        'Up to 5 attachments per email',
+        '5 conversation groups per month',
+        '5 attachments per group',
         '1 GB storage',
         '30-day retention',
         'AI Image Recognition',
-        'Multi-Scenario Analysis',
-        'AI smart summaries',
-        'Basic search'
+        'AI Smart Summary',
+        'Basic Intelligent Analysis',
+        'Basic Search'
       ],
-      additionalInfo: 'Perfect for trying out'
+      additionalInfo: 'Perfect for personal trial, experience core features, easily manage a small number of important conversations.'
     },
     {
       name: 'Starter',
-      description: 'Entry-level experience',
+      description: 'Individual Users',
       price: '$4.99',
       period: '/month',
       buttonText: 'Subscribe Now',
       buttonLink: 'https://app.aimychats.com/register',
       features: [
-        '100 emails per month',
-        'Up to 10 attachments per email',
+        '100 conversation groups per month',
+        'Up to 10 attachments per group',
         '5 GB storage',
         '1-year retention',
         'AI Image Recognition',
-        'Multi-Scenario Analysis',
-        'AI smart summaries',
-        'Advanced search'
+        'AI Smart Summary',
+        'Multi-Scenario Intelligent Analysis',
+        'Advanced Search',
+        'Metadata Auto-Analysis',
+        'Non-Image Attachment Save & Download',
+        'Multi-Language Intelligent Analysis (English/Chinese/Spanish)'
       ],
-      additionalInfo: '~$0.05/email, stable user retention'
+      additionalInfo: 'Daily chat history management, great value, supports images and other attachments, review anytime.'
     },
     {
       name: 'Standard',
-      description: 'Main tier, best value',
+      description: 'Professional Users',
       price: '$9.90',
       period: '/month',
       buttonText: 'Subscribe Now',
       buttonLink: 'https://app.aimychats.com/register',
       featured: true,
       features: [
-        '500 emails per month',
-        'Up to 15 attachments per email',
+        '500 conversation groups per month',
+        'Up to 15 attachments per group',
         '10 GB storage',
         '3-year retention',
         'AI Image Recognition',
-        'Multi-Scenario Analysis',
-        'AI smart summaries',
-        'Advanced search'
+        'AI Smart Summary',
+        'Multi-Scenario Intelligent Analysis',
+        'Advanced Search',
+        'Metadata Auto-Analysis',
+        'Non-Image Attachment Save & Download',
+        'Multi-Language Intelligent Analysis (English/Chinese/Spanish)',
+        'IMAP Email Auto-Collection (Coming Soon)',
+        'Smart Summary Auto-Submit to Internal Platform (JIRA) (Coming Soon)'
       ],
-      additionalInfo: '~$0.02/email, highest value'
+      additionalInfo: 'For professionals and small-to-medium business teams, supports more data volume and long-term storage.'
     },
     {
       name: 'Pro',
-      description: 'Core profit tier',
+      description: 'Enterprise Users',
       price: '$29.99',
       period: '/month',
       buttonText: 'Subscribe Now',
       buttonLink: 'https://app.aimychats.com/register',
       features: [
-        '2000 emails per month',
-        'Up to 30 attachments per email',
+        '2000 conversation groups per month',
+        'Up to 25 attachments per group',
         '20 GB storage',
-        'Permanent retention',
+        'Permanent Storage',
         'AI Image Recognition',
-        'Multi-Scenario Analysis',
-        'AI smart summaries',
-        'Advanced search',
-        'Dedicated support'
+        'AI Smart Summary',
+        'Multi-Scenario Intelligent Analysis',
+        'Advanced Search',
+        'Metadata Auto-Analysis',
+        'Non-Image Attachment Save & Download',
+        'Multi-Language Intelligent Analysis (English/Chinese/Spanish)',
+        'IMAP Email Auto-Collection (Coming Soon)',
+        'Smart Summary Auto-Submit to Internal Platform (JIRA) (Coming Soon)'
       ],
-      additionalInfo: '~$0.015/email, high volume processing'
+      additionalInfo: 'For enterprise users handling large data volumes and long-term storage, combined text and image analysis, information management never lost.'
     }
   ],
-  note: 'All paid plans can be upgraded or downgraded anytime. Monthly billing, cancel anytime.',
-  comparisonHint: '👇 See detailed feature comparison below'
-}
-
-const comparisonData = {
-  title: 'Detailed Plan Comparison',
-  subtitle: 'Compare all features at a glance',
-  featureColumnTitle: 'Features',
-  swipeHint: '← Swipe to view more →',
-  plans: [
-    { name: 'Free', price: '$0/mo', featured: false },
-    { name: 'Starter', price: '$4.99/mo', featured: false },
-    { name: 'Standard', price: '$9.90/mo', featured: true },
-    { name: 'Pro', price: '$29.99/mo', featured: false }
-  ],
-  comparisonFeatures: [
-    { name: 'Monthly email quota', values: ['5 emails', '100 emails', '500 emails', '2000 emails'], highlighted: true },
-    { name: 'Attachments per email', values: ['5', '10', '15', '30'], highlighted: true },
-    { name: 'Storage capacity', values: ['1 GB', '5 GB', '10 GB', '20 GB'], highlighted: true },
-    { name: 'Data retention', values: ['30 days', '1 year', '3 years', 'Permanent'], highlighted: true },
-    { name: 'AI Image Recognition', values: [true, true, true, true], highlighted: true },
-    { name: 'Multi-Scenario Analysis', values: [true, true, true, true], highlighted: true },
-    { name: 'AI smart summaries', values: [true, true, true, true], highlighted: false },
-    { name: 'Smart search', values: ['Basic', 'Advanced', 'Advanced', 'Advanced'], highlighted: false },
-    { name: 'Dedicated support', values: [false, false, false, true], highlighted: false }
-  ]
+  note: 'All paid plans can be upgraded or downgraded anytime. Monthly billing, cancel anytime.'
 }
 
 const footerData = {
@@ -247,23 +287,22 @@ const footerData = {
   copyright: '',
   productTitle: 'Product',
   resourceTitle: 'Resources',
-  companyTitle: 'Company',
+  companyTitle: '',
+  aboutTitle: 'About',
   socialLinks: [
-    { icon: 'github', url: 'https://github.com/devify', name: 'GitHub' }
+    { icon: 'github', url: 'https://github.com/cloud2ai/devify', name: 'GitHub' }
   ],
   productLinks: [
     { text: 'Features', url: '/en/#features' },
-    { text: 'Pricing', url: '/en/#pricing' },
-    { text: 'Changelog', url: '#' }
+    { text: 'Pricing', url: '/en/#pricing' }
   ],
   resourceLinks: [
     { text: 'FAQ', url: '/en/faq' },
-    { text: 'Quick Guide', url: '/en/guide/getting-started' },
-    { text: 'API Docs', url: '/api/authentication' }
+    { text: 'Quick Guide', url: '/en/guide/getting-started' }
   ],
-  companyLinks: [
-    { text: 'About', url: '#' },
-    { text: 'Contact', url: '#' }
+  companyLinks: [],
+  aboutLinks: [
+    { text: 'About Us', url: '/en/about' }
   ],
   legalLinks: [
     { text: 'Privacy', url: '/en/privacy' },
@@ -277,5 +316,4 @@ const footerData = {
 <HowItWorks v-bind="howItWorksData" />
 <UseCases v-bind="useCasesData" />
 <Pricing v-bind="pricingData" />
-<PricingComparison v-bind="comparisonData" />
 <Footer v-bind="footerData" />

@@ -4,7 +4,8 @@
       <!-- Section Header -->
       <div class="text-center mb-12 md:mb-16">
         <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-          {{ title }}
+          <span class="md:hidden whitespace-pre-line">{{ formattedTitleMobile }}</span>
+          <span class="hidden md:inline">{{ formattedTitle }}</span>
         </h2>
         <p class="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
           {{ subtitle }}
@@ -14,7 +15,7 @@
       <!-- Steps -->
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 relative">
         <!-- Connection lines for desktop -->
-        <div class="hidden md:block absolute top-24 left-0 right-0 h-0.5 bg-gradient-to-r from-primary-200 via-primary-400 to-primary-200" style="width: 66%; margin-left: 17%;"></div>
+        <div class="hidden md:block absolute top-10 left-0 right-0 h-0.5 bg-gradient-to-r from-primary-200 via-primary-400 to-primary-200" style="width: 66%; margin-left: 17%;"></div>
 
         <div
           v-for="(step, index) in steps"
@@ -59,7 +60,9 @@
 </template>
 
 <script setup>
-defineProps({
+import { computed } from 'vue'
+
+const props = defineProps({
   title: {
     type: String,
     required: true
@@ -72,6 +75,21 @@ defineProps({
     type: Array,
     required: true
   }
+})
+
+// Format title for PC (single line, no line breaks)
+const formattedTitle = computed(() => {
+  return props.title.replace(/\n/g, '')
+})
+
+// Format title for mobile (with line break after "简单三步")
+const formattedTitleMobile = computed(() => {
+  const title = props.title.replace(/\n/g, '')
+  // Insert line break after "简单三步"
+  if (title.includes('简单三步')) {
+    return title.replace('简单三步', '简单三步\n')
+  }
+  return title
 })
 </script>
 
@@ -96,21 +114,10 @@ defineProps({
   color: white !important;
 }
 
+
 .how-it-works-wrapper :deep(.text-gray-600),
 .how-it-works-wrapper :deep(.text-gray-700) {
   color: rgba(255, 255, 255, 0.9) !important;
 }
 
-@media (max-width: 768px) {
-  .how-it-works-wrapper::after {
-    content: '';
-    position: absolute;
-    left: 2.5rem;
-    top: 12rem;
-    bottom: 4rem;
-    width: 2px;
-    background: linear-gradient(to bottom, rgba(255,255,255,0.3), rgba(255,255,255,0.6), rgba(255,255,255,0.3));
-    z-index: 1;
-  }
-}
 </style>

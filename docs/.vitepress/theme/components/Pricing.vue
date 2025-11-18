@@ -70,9 +70,6 @@
               :key="fIndex"
               class="flex items-start"
             >
-              <svg class="w-5 h-5 text-green-500 mr-3 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
-              </svg>
               <span class="text-sm text-gray-700" v-html="feature"></span>
             </li>
           </ul>
@@ -130,6 +127,37 @@ defineProps({
     default: ''
   }
 })
+
+const isBasicFeature = (feature) => {
+  if (typeof feature !== 'string') return false
+  return feature.includes('基础') || feature.includes('不支持')
+}
+
+const isExclusiveFeature = (feature) => {
+  if (typeof feature !== 'string') return false
+  // 独有功能：只在高级方案中才有的功能
+  const exclusiveKeywords = [
+    '永久保存',
+    'IMAP',
+    'JIRA'
+  ]
+  return exclusiveKeywords.some(keyword => feature.includes(keyword))
+}
+
+const isFeaturedFeature = (feature) => {
+  if (typeof feature !== 'string') return false
+  // 如果已经是独有功能，就不再标记为特色功能
+  if (isExclusiveFeature(feature)) return false
+  const featuredKeywords = [
+    '高级',
+    '多场景',
+    '元数据',
+    '非图片附件',
+    '多语言',
+    '专属'
+  ]
+  return featuredKeywords.some(keyword => feature.includes(keyword))
+}
 </script>
 
 <style scoped>

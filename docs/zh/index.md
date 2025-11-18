@@ -8,30 +8,55 @@ import Features from '../.vitepress/theme/components/Features.vue'
 import HowItWorks from '../.vitepress/theme/components/HowItWorks.vue'
 import UseCases from '../.vitepress/theme/components/UseCases.vue'
 import Pricing from '../.vitepress/theme/components/Pricing.vue'
-import PricingComparison from '../.vitepress/theme/components/PricingComparison.vue'
 import Footer from '../.vitepress/theme/components/Footer.vue'
 
 const heroData = {
-  badge: '图片识别 · 多场景智能分析',
+  badge: '统一管理 · 智能归类 · 秒速查找',
   title: '聊天记录 AI 智能助手',
-  subtitle: '微信、邮件、WhatsApp 聊天记录永久保存，AI 识别图片内容 + 多场景智能分析。工作、客服、产品...不同场景精准理解！',
+  points: [
+    {
+      icon: 'unified',
+      text: '微信、邮件、WhatsApp 聊天记录统一管理'
+    },
+    {
+      icon: 'ai',
+      text: 'AI 识别图片内容 + 智能分析归类'
+    },
+    {
+      icon: 'search',
+      text: '秒速查找历史对话'
+    },
+    {
+      icon: 'process',
+      text: '选择 → 转发 → 轻松完成！'
+    }
+  ],
   primaryButtonText: '立即开始',
   primaryButtonLink: 'https://app.aimychats.com/register',
   secondaryButtonText: '查看功能',
   secondaryButtonLink: '/zh/#features',
+  carouselSlides: [
+    {
+      image: '/images/dashboard-list-zh.png',
+      alt: 'AImyChats 产品截图 - 列表页面',
+      title: '统一管理所有对话',
+      description: '微信、邮件、WhatsApp 聊天记录集中展示，一目了然，智能检索也在这个页面'
+    },
+    {
+      image: '/images/detailed-zh.png',
+      alt: 'AImyChats 产品截图 - 详细页面',
+      title: '对话智能信息展示',
+      description: 'AI智能总结, 原始对话参考含图片,附件信息展示'
+    }
+  ],
   imageSrc: '/images/dashboard-list-zh.png',
   imageAlt: 'AImyChats 产品截图 - 列表页面',
-  features: [
-    'AI 图片识别',
-    '多场景智能分析',
-    '永久云端保存',
-    '秒速智能搜索'
-  ]
+  features: []
 }
 
 const howItWorksData = {
-  title: '简单三步，开启智能聊天记录管理',
-  subtitle: '无需复杂配置，几分钟即可上手',
+  title: '简单三步开启智能聊天记录管理',
+  subtitle: '无需复杂配置，一分钟即可上手',
   steps: [
     {
       icon: 'email',
@@ -52,78 +77,106 @@ const howItWorksData = {
 }
 
 const featuresData = {
-  title: '解决聊天记录管理痛点',
-  subtitle: '图片识别 + 多场景智能分析，比普通摘要更准确更智能',
+  title: '让聊天记录重新变得清晰',
+  subtitle: '跨平台统一管理 图文智能理解',
   features: [
     {
-      icon: 'ai',
-      title: '多场景智能分析',
-      description: '工作沟通、客户咨询、产品讨论...选择对话场景，AI 针对性分析。客服场景提取问题要点，产品场景识别需求细节，更智能更精准！'
-    },
-    {
-      icon: 'image',
-      title: 'AI 图片识别 + 图文结合',
-      description: '聊天中的截图、照片、图表...AI 自动识别图片内容，结合文字一起分析。产品截图、数据图表、需求文档都能准确理解！'
-    },
-    {
       icon: 'backup',
-      title: '聊天记录永不丢失',
-      description: '微信聊天记录换手机就没了？图片过期显示不了？一键转发到 AImyChats，文字+图片云端永久保存，随时回顾。'
+      title: '所有对话都在一个地方',
+      description: '微信、邮件、客服消息……不再散落各处。一键转发自动整理、自动分类。所有沟通终于回到同一个空间。'
     },
     {
       icon: 'search',
-      title: '秒速搜索历史记录',
-      description: '记得聊过但找不到？强大的 AI 搜索图片内容和文字，秒速定位任何历史对话，关键词、图片内容、场景分类随意查。'
+      title: '你想找的内容瞬间出现',
+      description: '不是普通搜索。是基于文字、图片、联系人、场景的多维检索。快到像是直接跳到你想看的那一句。'
+    },
+    {
+      icon: 'image',
+      title: '不仅理解文字也理解图片',
+      description: '截图、数据图表、UI设计、表格、照片。AI 全部能看懂。图文结合理解让每次摘要更完整、更可信。'
+    },
+    {
+      icon: 'backup',
+      title: '始终保存 永不丢失',
+      description: '换手机、清缓存、图片过期不再是问题。你的聊天记录在云端持续保存。随时随地都能打开。'
     }
   ]
 }
 
 const useCasesData = {
-  title: '谁需要聊天记录 AI 助手？',
+  title: '谁需要聊天记录 AI 智能助手？',
   subtitle: '只要您有重要对话需要保存和管理，AImyChats 就是您的最佳选择',
   useCases: [
     {
-      icon: 'personal',
-      title: '职场人士 - 工作对话不再丢失',
-      description: '客户需求、领导指示、同事交流...重要工作对话随手保存，AI 帮您提炼关键信息和待办事项。',
-      benefits: [
-        '客户沟通永久留存',
-        '工作指示随时回看',
-        'AI 提取待办事项',
-        '重要决策不遗漏'
-      ]
-    },
-    {
-      icon: 'business',
-      title: '创业者 - 商务往来清晰可查',
-      description: '合作伙伴沟通、商务谈判、项目细节，所有关键对话永久保存，需要时快速查阅。',
-      benefits: [
-        '商务谈判记录保存',
-        '合同细节随时查阅',
-        '项目沟通历史追溯',
-        'AI 提炼关键条款'
-      ]
-    },
-    {
       icon: 'team',
-      title: '团队管理者 - 协作记录一目了然',
-      description: '团队讨论、任务分配、进度反馈，AI 自动整理关键信息，团队协作更高效。',
+      role: '企业高管',
+      subtitle: '大量信息需要快速复盘',
+      description: '项目沟通、决策背景、团队讨论，AI 自动整理关键信息，让决策更高效。',
       benefits: [
-        '团队讨论自动归档',
-        '任务分配清晰可查',
-        '进度更新实时追踪',
-        'AI 生成会议纪要'
+        '项目沟通自动归档',
+        '多场景 AI 分析（工作 / 产品 / 项目）',
+        '重要决策永久保存',
+        '决策依据快速追溯'
       ]
     },
     {
-      icon: 'support',
-      title: '自由职业者 - 客户需求精准记录',
-      description: '客户需求、项目细节、修改意见，所有沟通记录永久保存，避免遗漏和纠纷。',
+      icon: 'lawyer',
+      role: '律师',
+      subtitle: '每条沟通都是关键证据',
+      description: '合同、客户咨询、证据信息散落多端，AI 自动结构化整理，快速找到关键内容。',
       benefits: [
-        '客户需求完整记录',
-        '项目细节随时回看',
-        '修改历史清晰可查',
-        'AI 整理关键要求'
+        '多平台对话归档',
+        '图文结合理解证据',
+        '关键条款自动提炼',
+        '永久可查历史记录'
+      ]
+    },
+    {
+      icon: 'doctor',
+      role: '医生',
+      subtitle: '碎片化病情沟通不再遗漏',
+      description: '患者截图、检测报告、对话说明分散，AI 自动汇总整理，让病情跟踪更精准。',
+      benefits: [
+        '检验单/处方自动识别',
+        '患者沟通永久留存',
+        '重点症状自动提炼',
+        '快速搜索患者历史'
+      ]
+    },
+    {
+      icon: 'finance',
+      role: '金融顾问',
+      subtitle: '客户沟通责任边界清晰',
+      description: '每次沟通都可能影响信任或业绩，AI 帮你记录、整理、追溯历史。',
+      benefits: [
+        '多端沟通统一管理',
+        '需求和承诺清晰记录',
+        '图文识别还原客户意图',
+        '历史沟通可追溯'
+      ]
+    },
+    {
+      icon: 'sales',
+      role: '客户经理',
+      subtitle: '高频客户沟通轻松管理',
+      description: '多平台客户沟通容易遗漏细节，AI 自动整理摘要和待办。',
+      benefits: [
+        '客户需求自动提炼',
+        '图片+文字理解',
+        '历史沟通秒速定位',
+        '一键生成销售摘要'
+      ]
+    },
+    {
+      icon: 'consultant',
+      role: '心理咨询师',
+      subtitle: '客户历史完整跟踪',
+      description: '沟通内容需要结构化保存，便于复盘和长期跟踪。',
+      benefits: [
+        '多渠道沟通自动保存',
+        'AI 自动整理要点与目标',
+        '长期跟踪轻松管理',
+        '历史记录随时查'
       ]
     }
   ]
@@ -135,110 +188,97 @@ const pricingData = {
   featuredLabel: '高性价比',
   plans: [
     {
-      name: 'Free',
-      description: '免费体验入门',
+      name: '免费体验',
+      description: ' ',
       price: '$0',
-      period: '/月',
+      period: '/ 月',
       buttonText: '开始使用',
       buttonLink: 'https://app.aimychats.com/register',
       features: [
-        '每月 5 封邮件',
-        '每封最多 5 个附件',
-        '1 GB 存储空间',
-        '30 天数据保留',
+        '每月 5 组对话',
+        '每组附件图片 5 个',
+        '存储 1 GB',
+        '数据保留 30 天',
         'AI 图片识别',
-        '多场景智能分析',
         'AI 智能摘要',
+        '基础智能分析',
         '基础搜索'
       ],
-      additionalInfo: '适合尝试产品功能'
+      additionalInfo: '个人试用，体验核心功能，轻松管理少量重要对话。'
     },
     {
       name: 'Starter',
-      description: '入门档，低门槛体验',
+      description: '个人用户',
       price: '$4.99',
-      period: '/月',
+      period: '/ 月',
       buttonText: '立即订阅',
       buttonLink: 'https://app.aimychats.com/register',
       features: [
-        '每月 100 封邮件',
-        '每封最多 10 个附件',
-        '5 GB 存储空间',
-        '1 年数据保留',
+        '每月 100 组对话',
+        '每组附件最多 10 个',
+        '存储 5 GB',
+        '数据保留 1 年',
         'AI 图片识别',
-        '多场景智能分析',
         'AI 智能摘要',
-        '高级搜索'
+        '多场景智能分析',
+        '高级搜索',
+        '元数据自动分析',
+        '非图片附件保存与下载',
+        '多语言智能分析（英语/中文/西班牙语）'
       ],
-      additionalInfo: '约 $0.05/封，稳定留存新用户'
+      additionalInfo: '日常聊天记录管理，高性价比，支持图片及其他附件内容，随时查阅和回顾。'
     },
     {
       name: 'Standard',
-      description: '中档主力档',
+      description: '专业用户',
       price: '$9.90',
-      period: '/月',
+      period: '/ 月',
       buttonText: '立即订阅',
       buttonLink: 'https://app.aimychats.com/register',
       featured: true,
       features: [
-        '每月 500 封邮件',
-        '每封最多 15 个附件',
-        '10 GB 存储空间',
-        '3 年数据保留',
+        '每月 500 组对话',
+        '每组附件最多 15 个',
+        '存储 10 GB',
+        '数据保留 3 年',
         'AI 图片识别',
-        '多场景智能分析',
         'AI 智能摘要',
-        '高级搜索'
+        '多场景智能分析',
+        '高级搜索',
+        '元数据自动分析',
+        '非图片附件保存与下载',
+        '多语言智能分析（英语/中文/西班牙语）',
+        'IMAP 邮件自动收取（即将开放）',
+        '智能总结信息自动提交内部平台 (JIRA)（即将开放）'
       ],
-      additionalInfo: '约 $0.02/封，性价比最高'
+      additionalInfo: '专业人士及中小企业团队使用，支持更多数据量与长期保存。'
     },
     {
       name: 'Pro',
-      description: '核心盈利档',
+      description: '企业用户',
       price: '$29.99',
-      period: '/月',
+      period: '/ 月',
       buttonText: '立即订阅',
       buttonLink: 'https://app.aimychats.com/register',
       features: [
-        '每月 2000 封邮件',
-        '每封最多 30 个附件',
-        '20 GB 存储空间',
-        '永久数据保留',
+        '每月 2000 组对话',
+        '每组附件最多 25 个',
+        '存储 20 GB',
+        '永久保存',
         'AI 图片识别',
-        '多场景智能分析',
         'AI 智能摘要',
+        '多场景智能分析',
         '高级搜索',
-        '专属技术支持'
+        '元数据自动分析',
+        '非图片附件保存与下载',
+        '多语言智能分析（英语/中文/西班牙语）',
+        'IMAP 邮件自动收取（即将开放）',
+        '智能总结信息自动提交内部平台 (JIRA)（即将开放）'
       ],
-      additionalInfo: '约 $0.015/封，大量处理专用'
+      additionalInfo: '企业用户大量数据处理及长期保存，图文结合分析，信息管理再也不丢失。'
     }
   ],
-  note: '所有付费方案均可随时升级或降级，按月计费，随时可取消。',
-  comparisonHint: '👇 查看下方详细功能对比表'
-}
-
-const comparisonData = {
-  title: '详细功能对比',
-  subtitle: '一目了然，选择最适合您的方案',
-  featureColumnTitle: '功能特性',
-  swipeHint: '← 左右滑动查看更多 →',
-  plans: [
-    { name: 'Free', price: '$0/月', featured: false },
-    { name: 'Starter', price: '$4.99/月', featured: false },
-    { name: 'Standard', price: '$9.90/月', featured: true },
-    { name: 'Pro', price: '$29.99/月', featured: false }
-  ],
-  comparisonFeatures: [
-    { name: '每月邮件处理量', values: ['5 封', '100 封', '500 封', '2000 封'], highlighted: true },
-    { name: '每封附件上限', values: ['5 个', '10 个', '15 个', '30 个'], highlighted: true },
-    { name: '存储空间', values: ['1 GB', '5 GB', '10 GB', '20 GB'], highlighted: true },
-    { name: '数据保留期', values: ['30 天', '1 年', '3 年', '永久'], highlighted: true },
-    { name: 'AI 图片识别', values: [true, true, true, true], highlighted: true },
-    { name: '多场景智能分析', values: [true, true, true, true], highlighted: true },
-    { name: 'AI 智能摘要', values: [true, true, true, true], highlighted: false },
-    { name: '智能搜索', values: ['基础', '高级', '高级', '高级'], highlighted: false },
-    { name: '专属技术支持', values: [false, false, false, true], highlighted: false }
-  ]
+  note: '所有付费方案均可随时升级或降级，按月计费，随时可取消。'
 }
 
 const footerData = {
@@ -247,23 +287,22 @@ const footerData = {
   copyright: '',
   productTitle: '产品',
   resourceTitle: '资源',
-  companyTitle: '公司',
+  companyTitle: '',
+  aboutTitle: '关于',
   socialLinks: [
-    { icon: 'github', url: 'https://github.com/devify', name: 'GitHub' }
+    { icon: 'github', url: 'https://github.com/cloud2ai/devify', name: 'GitHub' }
   ],
   productLinks: [
     { text: '功能特性', url: '/zh/#features' },
-    { text: '价格方案', url: '/zh/#pricing' },
-    { text: '更新日志', url: '#' }
+    { text: '价格方案', url: '/zh/#pricing' }
   ],
   resourceLinks: [
     { text: '常见问题', url: '/zh/faq' },
-    { text: '使用说明', url: '/zh/guide/wechat-backup' },
-    { text: 'API 文档', url: '/api/authentication' }
+    { text: '使用说明', url: '/zh/guide/wechat-backup' }
   ],
-  companyLinks: [
-    { text: '关于我们', url: '#' },
-    { text: '联系我们', url: '#' }
+  companyLinks: [],
+  aboutLinks: [
+    { text: '关于我们', url: '/zh/about' }
   ],
   legalLinks: [
     { text: '隐私政策', url: '/zh/privacy' },
@@ -277,5 +316,4 @@ const footerData = {
 <HowItWorks v-bind="howItWorksData" />
 <UseCases v-bind="useCasesData" />
 <Pricing v-bind="pricingData" />
-<PricingComparison v-bind="comparisonData" />
 <Footer v-bind="footerData" />

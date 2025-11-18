@@ -63,7 +63,7 @@
 import { ref, computed, onMounted, onUnmounted } from 'vue'
 import { useData } from 'vitepress'
 
-const { lang } = useData()
+const { path } = useData()
 const isOpen = ref(false)
 const dropdownRef = ref(null)
 
@@ -73,15 +73,30 @@ const languages = [
 ]
 
 const currentLang = computed(() => {
-  const path = typeof window !== 'undefined' ? window.location.pathname : ''
-  if (path.startsWith('/zh')) return 'zh-CN'
-  if (path.startsWith('/en')) return 'en-US'
+  // Use path to determine current language (most reliable)
+  // path.value will be like '/zh/' or '/en/' or '/zh/guide/...' or '/en/guide/...'
+  if (!path || !path.value) {
+    // Fallback: use window.location if path is not available
+    if (typeof window !== 'undefined') {
+      const currentPath = window.location.pathname
+      if (currentPath.startsWith('/en')) {
+        return 'en-US'
+      }
+    }
+    return 'zh-CN'
+  }
+
+  const currentPath = path.value
+  if (typeof currentPath === 'string' && currentPath.startsWith('/en')) {
+    return 'en-US'
+  }
+  // Default to Chinese (zh-CN) for '/zh' paths or root locale
   return 'zh-CN'
 })
 
 const currentFlag = computed(() => {
-  const lang = languages.find(l => l.code === currentLang.value)
-  return lang ? lang.flag : '🌐'
+  const foundLang = languages.find(l => l.code === currentLang.value)
+  return foundLang ? foundLang.flag : '🌐'
 })
 
 const toggleDropdown = () => {

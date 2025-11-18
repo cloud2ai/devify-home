@@ -26,16 +26,6 @@ export default defineConfig({
                 { text: '功能说明', link: '/zh/guide/features' }
               ]
             }
-          ],
-          '/api/': [
-            {
-              text: 'API 文档',
-              items: [
-                { text: '认证', link: '/api/authentication' },
-                { text: 'Webhooks', link: '/api/webhooks' },
-                { text: 'API 参考', link: '/api/reference' }
-              ]
-            }
           ]
         },
         footer: {
@@ -65,16 +55,6 @@ export default defineConfig({
                 { text: 'Integrations', link: '/en/guide/integrations' }
               ]
             }
-          ],
-          '/api/': [
-            {
-              text: 'API Documentation',
-              items: [
-                { text: 'Authentication', link: '/api/authentication' },
-                { text: 'Webhooks', link: '/api/webhooks' },
-                { text: 'API Reference', link: '/api/reference' }
-              ]
-            }
           ]
         },
         footer: {
@@ -99,6 +79,16 @@ export default defineConfig({
   ],
 
   vite: {
+    server: {
+      host: '0.0.0.0',
+      port: 5173,
+      strictPort: false,
+      hmr: {
+        protocol: 'ws',
+        host: '192.168.8.182',
+        port: 5173
+      }
+    },
     resolve: {
       alias: {
         '@': '/docs/.vitepress/theme'

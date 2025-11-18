@@ -1,11 +1,11 @@
 <template>
-  <footer class="footer-wrapper relative text-gray-300 py-12 md:py-16 overflow-hidden">
+  <footer class="footer-wrapper relative text-gray-300 py-8 md:py-10 overflow-hidden">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 mb-6">
         <!-- Company Info -->
         <div>
-          <h3 class="text-white font-semibold text-lg mb-4">{{ companyName }}</h3>
-          <p class="text-sm text-gray-400 mb-4">
+          <h3 class="text-white font-semibold text-lg mb-3">{{ companyName }}</h3>
+          <p class="text-sm text-gray-400 mb-3">
             {{ companyDescription }}
           </p>
           <!-- Social Links -->
@@ -30,12 +30,12 @@
 
         <!-- Product Links -->
         <div v-if="productLinks && productLinks.length > 0">
-          <h4 class="text-white font-semibold mb-4">{{ productTitle }}</h4>
-          <ul class="space-y-2">
+          <h4 class="text-white font-semibold mb-3">{{ productTitle }}</h4>
+          <ul class="space-y-1.5">
             <li v-for="(link, index) in productLinks" :key="index">
               <a
                 :href="link.url"
-                class="text-sm hover:text-white transition-colors duration-200 inline-flex items-center min-h-[44px] py-1"
+                class="text-sm hover:text-white transition-colors duration-200 inline-flex items-center py-0.5"
               >
                 {{ link.text }}
               </a>
@@ -45,12 +45,12 @@
 
         <!-- Resources Links -->
         <div v-if="resourceLinks && resourceLinks.length > 0">
-          <h4 class="text-white font-semibold mb-4">{{ resourceTitle }}</h4>
-          <ul class="space-y-2">
+          <h4 class="text-white font-semibold mb-3">{{ resourceTitle }}</h4>
+          <ul class="space-y-1.5">
             <li v-for="(link, index) in resourceLinks" :key="index">
               <a
                 :href="link.url"
-                class="text-sm hover:text-white transition-colors duration-200 inline-flex items-center min-h-[44px] py-1"
+                class="text-sm hover:text-white transition-colors duration-200 inline-flex items-center py-0.5"
               >
                 {{ link.text }}
               </a>
@@ -60,12 +60,27 @@
 
         <!-- Company Links -->
         <div v-if="companyLinks && companyLinks.length > 0">
-          <h4 class="text-white font-semibold mb-4">{{ companyTitle }}</h4>
-          <ul class="space-y-2">
+          <h4 class="text-white font-semibold mb-3">{{ companyTitle }}</h4>
+          <ul class="space-y-1.5">
             <li v-for="(link, index) in companyLinks" :key="index">
               <a
                 :href="link.url"
-                class="text-sm hover:text-white transition-colors duration-200 inline-flex items-center min-h-[44px] py-1"
+                class="text-sm hover:text-white transition-colors duration-200 inline-flex items-center py-0.5"
+              >
+                {{ link.text }}
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- About Links -->
+        <div v-if="aboutLinks && aboutLinks.length > 0">
+          <h4 class="text-white font-semibold mb-3">{{ aboutTitle }}</h4>
+          <ul class="space-y-1.5">
+            <li v-for="(link, index) in aboutLinks" :key="index">
+              <a
+                :href="link.url"
+                class="text-sm hover:text-white transition-colors duration-200 inline-flex items-center py-0.5"
               >
                 {{ link.text }}
               </a>
@@ -75,7 +90,7 @@
       </div>
 
       <!-- Bottom Bar -->
-      <div class="pt-8 mt-8 border-t border-gray-700">
+      <div class="pt-6 mt-6 border-t border-gray-700">
         <div class="flex flex-col md:flex-row justify-between items-center gap-4">
           <p class="text-sm text-gray-400">
             © {{ new Date().getFullYear() }} {{ companyName }}
@@ -122,6 +137,10 @@ defineProps({
     type: String,
     default: 'Company'
   },
+  aboutTitle: {
+    type: String,
+    default: 'About'
+  },
   socialLinks: {
     type: Array,
     default: () => []
@@ -135,6 +154,10 @@ defineProps({
     default: () => []
   },
   companyLinks: {
+    type: Array,
+    default: () => []
+  },
+  aboutLinks: {
     type: Array,
     default: () => []
   },
