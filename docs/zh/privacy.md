@@ -1,237 +1,342 @@
-# 隐私政策
 
-**生效日期：2025年11月9日**
-**最后更新：2025年11月9日**
 
-## 引言
-
-欢迎使用 AImyChats（以下简称"我们"、"我们的"或"本服务"）。我们重视您的隐私，并致力于保护您的个人信息。本隐私政策说明我们如何收集、使用、存储和保护您的信息。
-
-使用 AImyChats 即表示您同意本隐私政策中描述的做法。
-
-## 我们收集的信息
-
-### 1. 您提供的信息
-
-**账户信息**：
-- 电子邮件地址
-- 密码（加密存储）
-- 用户名（如果提供）
-
-**聊天记录内容**：
-- 您转发到我们服务的邮件和聊天记录
-- 邮件附件（图片、文件等）
-- 对话元数据（发送时间、参与者等）
-
-### 2. 自动收集的信息
-
-**使用数据**：
-- 访问时间和频率
-- 使用的功能
-- 设备信息（浏览器类型、操作系统）
-- IP 地址
-
-**Cookie 和类似技术**：
-- 会话 Cookie（用于保持登录状态）
-- 偏好设置 Cookie（语言、时区等）
-
-## 我们如何使用您的信息
-
-### 核心服务
-
-- **处理和存储聊天记录**：保存您转发的对话内容
-- **AI 分析**：生成对话摘要和关键信息提取
-- **搜索功能**：让您能够搜索历史记录
-- **账户管理**：管理您的订阅和设置
-
-### 服务改进
-
-- 分析使用模式以改进服务
-- 开发新功能
-- 修复错误和技术问题
-
-### 通信
-
-- 发送服务相关通知（系统维护、安全提醒）
-- 回应您的支持请求
-- 发送订阅和账单信息
-
-**我们不会**：
-- ❌ 将您的数据出售给第三方
-- ❌ 用于广告目的
-- ❌ 与未经授权的第三方共享
-
-## 数据存储和安全
-
-### 存储位置
-
-- **中国用户**：数据存储在阿里云（中国区域）
-- **国际用户**：数据存储在 AWS（美国/欧洲区域）
-
-您可以在账户设置中选择数据存储区域。
-
-### 安全措施
-
-**传输安全**：
-- 所有数据传输使用 HTTPS/TLS 加密
-- SSL 证书保护
-
-**存储安全**：
-- AES-256 加密存储
-- 定期安全审计
-- 访问控制和权限管理
-
-**密码安全**：
-- 使用行业标准的哈希算法
-- 永不明文存储密码
-
-### 数据保留
-
-根据您的订阅计划：
-- **Free**：30 天后自动删除
-- **Starter**：保留 1 年
-- **Standard**：保留 3 年
-- **Pro**：永久保留
-
-您可以随时删除您的数据。
-
-## 数据共享
-
-### 我们不会共享您的个人数据，除非：
-
-**法律要求**：
-- 遵守法律义务
-- 响应法律程序（传票、法院命令等）
-- 保护我们的权利和安全
-
-**服务提供商**：
-我们可能与以下服务提供商共享必要信息：
-- 云存储服务提供商（阿里云、AWS）
-- 支付处理商（Stripe）
-- AI 服务提供商（用于生成摘要）
-
-**所有第三方服务商均受严格的保密协议约束。**
-
-### 不会共享的情况
-
-- ❌ 营销或广告目的
-- ❌ 出售给数据经纪人
-- ❌ 与社交媒体平台共享
-
-## 您的权利
-
-### 访问和控制
-
-您有权：
-- ✅ **访问**您的数据
-- ✅ **更正**不准确的信息
-- ✅ **删除**您的账户和数据
-- ✅ **导出**您的数据（Pro 版本，即将推出）
-- ✅ **反对**数据处理
-
-### 如何行使权利
-
-1. 登录您的账户
-2. 进入"设置" → "隐私与数据"
-3. 选择相应操作
-
-或发送邮件至：privacy@aimychats.com
-
-我们将在 **30 天内**响应您的请求。
-
-## Cookie 政策
-
-### 我们使用的 Cookie
-
-**必要 Cookie**：
-- 会话管理
-- 身份验证
-- 安全功能
-
-**功能 Cookie**：
-- 语言偏好
-- 时区设置
-- 用户界面偏好
-
-**我们不使用**：
-- ❌ 广告 Cookie
-- ❌ 第三方跟踪 Cookie
-
-### 管理 Cookie
-
-您可以通过浏览器设置管理 Cookie。但禁用必要 Cookie 可能影响服务功能。
-
-## 儿童隐私
-
-AImyChats 不面向 13 岁以下儿童。我们不会故意收集儿童的个人信息。如果您发现我们收集了儿童信息，请联系我们，我们将立即删除。
-
-## 数据跨境传输
-
-如果您位于欧盟或其他地区，您的数据可能被传输到您所在司法管辖区之外的国家。我们会确保采取适当的保护措施。
-
-## GDPR 合规（适用于欧盟用户）
-
-如果您是欧盟居民，您享有以下权利：
-
-- **访问权**：获取我们持有的您的数据副本
-- **更正权**：更正不准确的数据
-- **删除权**（被遗忘权）：要求删除您的数据
-- **限制处理权**：限制我们处理您的数据
-- **数据可携权**：以结构化格式接收您的数据
-- **反对权**：反对处理您的数据
-- **撤回同意权**：随时撤回您的同意
-
-**法律依据**：
-- 合同履行（提供服务）
-- 合法利益（改进服务、安全）
-- 您的同意
-
-**投诉权**：您有权向数据保护机构投诉。
-
-## CCPA 合规（适用于加州用户）
-
-如果您是加州居民，根据 CCPA，您享有：
-
-- **知情权**：了解我们收集的个人信息
-- **删除权**：要求删除您的个人信息
-- **选择退出权**：选择退出个人信息的出售（我们不出售数据）
-- **不歧视权**：行使隐私权不会受到歧视
-
-## 安全事件通知
-
-如果发生数据泄露或安全事件，我们将：
-1. 在发现后 **72 小时内**通知受影响的用户
-2. 说明泄露的性质和范围
-3. 提供补救措施建议
-4. 向相关监管机构报告（如适用）
-
-## 隐私政策更新
-
-我们可能会不时更新本隐私政策。重大变更时，我们将：
-- 通过电子邮件通知您
-- 在网站上显著位置公告
-- 更新"最后更新"日期
-
-建议您定期查看本政策。
-
-## 第三方链接
-
-我们的服务可能包含第三方网站的链接。我们不对这些网站的隐私做法负责。请查看这些网站的隐私政策。
-
-## 联系我们
-
-如果您对本隐私政策有任何疑问或关切，请联系我们：
-
-- **邮箱**：privacy@email.aimychats.com
-- **支持邮箱**：support@email.aimychats.com
-- **地址**：[待补充]
-
-## 数据保护官
-
-如有数据保护相关问题，可联系我们的数据保护官：
-
-- **邮箱**：dpo@email.aimychats.com
+<span id="top"></span>
+# ⚖️ AImyChats 隐私政策
+<small style="display: block; margin-top: -1.5rem;">📋 [返回常见问题](/zh/faq)</small>
+
+
+<div style="margin:12px 0 8px 0; padding-left:12px; border-left:3px solid #E5E7EB; font-size: 0.9rem; margin-top: 2rem;"> 🔒 <strong>我们承诺：绝不出售或滥用您的个人数据，您的聊天内容仅对您本人可见。</strong> </div>
+
+<p style="font-size: 0.85rem; color: #6B7280; margin-top: 32px; line-height: 1.4;">
+<strong>生效日期：</strong> 2025年11月9日<br>
+<strong>最后更新：</strong> 2026年1月13日
+</p>
+
+
+## 📄 引言
+
+<p style="font-size: 0.9rem; line-height: 1.6;">欢迎使用 AImyChats（以下简称"我们"、"我们的"或"本服务"）。我们重视您的隐私，并致力于保护您的个人信息。本隐私政策详细说明我们如何收集、使用、存储和保护您的信息，以及您享有的权利。</p>
+
+<p style="font-size: 0.9rem; line-height: 1.6;"><strong>使用 AImyChats 即表示您同意本隐私政策中描述的做法。</strong></p>
+
+
+<style>
+/* ======== Privacy Page Styles ======== */
+
+/* H1 Main Title */
+.vp-doc h1 {
+  font-size: 1.5rem !important;
+  line-height: 1.4 !important;
+  font-weight: 700 !important;
+  margin: 1.5rem 0 2.5rem 0 !important;
+}
+
+/* H2 Secondary Title */
+.vp-doc h2 {
+  font-size: 1.05rem !important;
+  line-height: 1.4 !important;
+  font-weight: 600 !important;
+  margin: 0.5rem 0 0.4rem 0 !important;
+  border-top: none !important;
+  border-bottom: 1px solid #e5e7eb !important;
+  padding-bottom: 0.3rem !important;
+}
+
+/* H4 Fourth Level Title */
+.vp-doc h4 {
+  font-size: 0.88rem !important;
+  line-height: 1.4 !important;
+  font-weight: 600 !important;
+  margin: 0.8rem 0 0.4rem 0 !important;
+}
+
+.vp-doc details {
+  margin: 6px 0 !important;
+}
+
+/* details summary Title */
+.vp-doc details > summary {
+  cursor: pointer !important;
+  font-size: 0.95rem !important; /* Matched to FAQ page */
+  font-weight: 600 !important;
+  line-height: 1.5 !important;
+  margin: 8px 0 !important;
+  list-style: none !important;
+}
+
+.vp-doc details > summary::-webkit-details-marker {
+  display: none !important;
+}
+
+/* Custom Arrow */
+.vp-doc details > summary::before {
+  content: "";
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-right: 2px solid #6B7280;
+  border-bottom: 2px solid #6B7280;
+  transform: rotate(-45deg);
+  margin-right: 10px;
+  transition: transform 0.2s ease;
+}
+
+.vp-doc details[open] > summary::before {
+  transform: rotate(45deg);
+}
+
+/* details Content */
+.vp-doc details > div {
+  margin: 12px 0 !important;
+  padding-left: 12px !important;
+  border-left: 3px solid #E5E7EB !important;
+  line-height: 1.6 !important;
+  font-size: 0.9rem !important;
+}
+
+/* List items in details */
+.vp-doc details > div ul {
+  padding-left: 2em !important;
+}
+
+.vp-doc details > div li {
+  padding-left: 0.5em !important;
+  margin-bottom: 0.2em !important;
+  font-size: 0.9rem !important;
+}
+</style>
 
 ---
 
-**本隐私政策适用于 AImyChats 的所有用户。**
+
+
+## 📄 隐私政策概览
+
+<details>
+<summary>📥 我们收集的信息</summary>
+
+<div style="margin:12px 0; padding-left:12px; border-left:3px solid #F3F4F6;">
+
+
+#### ✅ 您主动提供的信息
+
+- **账户信息**：电子邮件地址、密码（加密）、用户名（如果提供）  
+- **聊天记录内容**：邮件和聊天记录、附件（图片、文件）、对话元数据（发送时间、参与者等） 
+
+#### ⚙️ 自动收集的信息
+- **使用数据**：访问时间和频率、使用功能、设备信息（浏览器类型、操作系统）、IP 地址  
+- **Cookie 和类似技术**：会话 Cookie（保持登录状态）、偏好设置 Cookie（语言、时区等）  
+
+</div>
+</details>
+
+<details>
+<summary>🔄 我们如何使用您的信息</summary>
+
+<div style="margin:12px 0; padding-left:12px; border-left:3px solid #F3F4F6;">
+
+#### 🧠 核心服务
+
+- 处理和存储聊天记录  
+- AI 分析（生成对话摘要和关键信息提取）  
+- 搜索功能（快速搜索历史记录）  
+- 账户管理（订阅与设置）  
+
+#### 🛠️ 服务改进
+
+- 分析使用模式改进体验  
+- 开发新功能  
+- 修复错误、提升稳定性  
+
+#### 📬 通信
+
+- 发送服务通知（系统维护、安全提醒）  
+- 回应支持请求  
+- 发送订阅和账单信息  
+
+#### ❌ 我们绝不
+
+- 出售数据  
+- 用于广告  
+- 与未经授权的第三方共享聊天内容  
+
+</div>
+</details>
+
+<details>
+<summary>💾 数据安全与事件响应</summary>
+
+<div style="margin:12px 0; padding-left:12px; border-left:3px solid #F3F4F6;">
+
+#### 🌍 存储位置
+
+- **中国用户**：阿里云（中国区域）  
+- **国际用户**：AWS（美国/欧洲区域）  
+- **选择权**：可在账户设置选择数据存储区域  
+
+#### 🔐 安全措施
+
+- **传输安全**：HTTPS/TLS 加密，SSL 证书保护  
+- **存储安全**：AES-256 加密，定期安全审计，严格访问控制  
+- **密码安全**：行业标准哈希算法，永不明文存储  
+
+#### 📅 数据保留期限
+| 订阅版本 | 数据保留期限 |
+|---|---|
+| Free（免费体验） | 30 天 |
+| Starter（个人用户） | 1 年 |
+| Standard（专业用户） | 3 年 |
+| Pro（企业用户） | 永久保留 |
+
+**提示：** 用户可随时登录账户删除数据  
+
+#### 🚨 安全事件通知
+
+- 发现后 **72 小时内**通知用户  
+- 透明说明泄露性质和范围  
+- 提供补救措施建议  
+- 向监管机构报告（如适用）  
+
+</div>
+</details>
+
+<details>
+<summary>🤝 数据共享</summary>
+<div style="margin:12px 0; padding-left:12px; border-left:3px solid #F3F4F6;">
+
+#### ⚖️ 法律要求
+
+- 遵守法律义务  
+- 响应法律程序（传票、法院命令等）  
+- 保护我们的权利和安全  
+
+#### 🧩 必要的服务提供商（严格保密协议）
+
+| 服务类型 | 提供商 | 用途 |
+|---|---|---|
+| 云存储 | 阿里云、AWS | 安全存储数据 |
+| 支付处理 | Stripe | 处理订阅付款 |
+| AI 服务 | OpenAI 等 | 生成 AI 摘要（仅加密环境） |
+
+#### ❌ 我们不会
+
+- 用于营销  
+- 出售数据  
+- 与社交平台共享聊天内容  
+
+</div>
+</details>
+
+<details>
+<summary>🛡️ 您的权利</summary>
+<div style="margin:12px 0; padding-left:12px; border-left:3px solid #F3F4F6;">
+
+#### 用户权利
+
+- ✅ **访问权**：访问所有数据  
+- ✅ **删除权**：删除所有数据  
+- ✅ **携带权**：导出数据（Pro版）  
+- ✅ **更正权**：更正不准确或不完整的数据  
+- ✅ **反对权**：反对某些数据处理方式  
+
+#### 如何行使
+
+- 登录账户 → 设置 → 隐私与数据  
+- 或邮件联系我们：privacy@email.aimychats.com  
+- **响应时间：30 天内**  
+
+</div>
+</details>
+
+<details>
+<summary>🍪 Cookie 政策</summary>
+<div style="margin:12px 0; padding-left:12px; border-left:3px solid #F3F4F6;">
+
+#### 使用的 Cookie
+
+- **必要 Cookie**：会话管理、身份验证、安全功能  
+- **功能 Cookie**：语言偏好、时区、界面设置  
+
+**❌ 不使用**广告或第三方跟踪 Cookie  
+
+#### 管理 Cookie
+
+- 可通过浏览器设置管理  
+- 注意：禁用必要 Cookie 可能影响服务功能  
+
+</div>
+</details>
+
+<details>
+<summary>👶 儿童隐私</summary>
+<div style="margin:12px 0; padding-left:12px; border-left:3px solid #F3F4F6;">
+
+- AImyChats 不面向13岁以下儿童  
+- 不会故意收集儿童信息  
+- 如果发现收集儿童信息，会立即删除  
+
+</div>
+</details>
+
+<details>
+<summary>🌍 数据跨境与法规</summary>
+<div style="margin:12px 0; padding-left:12px; border-left:3px solid #F3F4F6;">
+
+#### 数据跨境传输
+
+- 数据可能被传输到您所在司法管辖区之外  
+- 我们确保采取适当保护措施，符合当地法律法规  
+
+#### GDPR（欧盟用户）
+
+- 权利：访问、更正、删除、限制处理、数据可携、反对、撤回同意  
+- 法律依据：合同履行、合法利益、用户同意  
+- 投诉权：可向数据保护机构投诉  
+
+#### CCPA（加州用户）
+
+- 权利：知情、删除、选择退出数据出售、不歧视  
+- 注意：我们不出售用户数据  
+
+</div>
+</details>
+
+
+<details>
+<summary>🔄 隐私政策更新</summary>
+<div style="margin:12px 0; padding-left:12px; border-left:3px solid #F3F4F6;">
+
+- 重大变更通过邮件通知 & 网站公告  
+- 更新"最后更新"日期  
+- 建议定期查看本政策  
+
+</div>
+</details>
+
+<details>
+<summary>🔗 第三方链接</summary>
+<div style="margin:12px 0; padding-left:12px; border-left:3px solid #F3F4F6;">
+
+- 可能包含第三方网站链接  
+- 我们不对这些网站的隐私做法负责  
+- 请查看第三方网站隐私政策  
+
+</div>
+</details>
+
+<details>
+<summary>📞 联系我们</summary>
+<div style="margin:12px 0; padding-left:12px; border-left:3px solid #F3F4F6;">
+
+- 隐私问题: privacy@email.aimychats.com  
+- 技术支持: support@email.aimychats.com  
+- 数据保护官: dpo@email.aimychats.com
+
+</div>
+</details>
+
+---
+
+**本隐私政策适用于 AImyChats 所有用户。**
+
+<small>[返回顶部 ↑](#top) | [返回常见问题](faq.md)</small>
