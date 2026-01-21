@@ -94,9 +94,13 @@
 <span id="top"></span>
 # 📚 AImyChats 常见问题 (FAQ)
 
-<div style="margin:12px 0; padding-left:12px; border-left:3px solid #F3F4F6; font-size: 0.9rem;">
-  🔥 <strong>AImyChats：一键备份微信聊天，用AI永久保存、总结和搜索你的重要对话，释放手机空间</strong>
-
+<div style="margin:16px 0; padding:16px 20px; padding-left:20px; border-left:4px solid #3B82F6; background-color:#F8FAFC; border-radius:6px; font-size: 0.95rem; line-height: 1.8;">
+  <div style="margin-bottom:8px; font-weight:600; color:#1E40AF;">
+    🔥 <strong>AImyChats</strong>
+  </div>
+  <div style="color:#475569; padding-left:4px;">
+    智能管理你的多平台聊天记录，自动备份、归类与摘要，重要对话随手可查，信息安全可靠。
+  </div>
 </div>
 
 

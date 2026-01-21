@@ -94,8 +94,13 @@
 <span id="top"></span>
 # 📚 AImyChats Frequently Asked Questions (FAQ)
 
-<div style="margin:12px 0; padding-left:12px; border-left:3px solid #F3F4F6; font-size: 0.9rem;">
-  🔥 <strong>AImyChats: One-click WeChat backup — save, summarize, and search chats with AI.</strong>
+<div style="margin:16px 0; padding:16px 20px; padding-left:20px; border-left:4px solid #3B82F6; background-color:#F8FAFC; border-radius:6px; font-size: 0.95rem; line-height: 1.8;">
+  <div style="margin-bottom:8px; font-weight:600; color:#1E40AF;">
+    🔥 <strong>AImyChats</strong>
+  </div>
+  <div style="color:#475569; padding-left:4px;">
+    Smartly manage your cross-platform chat records with automatic backup, organization, and summaries—access important conversations anytime, securely.
+  </div>
 </div>
 
 
