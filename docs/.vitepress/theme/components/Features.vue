@@ -82,7 +82,7 @@ defineProps({
 
 <style scoped>
 .features-wrapper {
-  background: linear-gradient(to bottom, #ffffff 0%, #f8fafc 50%, #ffffff 100%);
+  background: #ffffff;
 }
 
 .features-background {

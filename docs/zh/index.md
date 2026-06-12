@@ -6,50 +6,61 @@ layout: page
 import Hero from '../.vitepress/theme/components/Hero.vue'
 import Features from '../.vitepress/theme/components/Features.vue'
 import HowItWorks from '../.vitepress/theme/components/HowItWorks.vue'
+import WeChatGuide from '../.vitepress/theme/components/WeChatGuide.vue'
+import SocialProof from '../.vitepress/theme/components/SocialProof.vue'
 import UseCases from '../.vitepress/theme/components/UseCases.vue'
+import OpenSourceBanner from '../.vitepress/theme/components/OpenSourceBanner.vue'
 import Pricing from '../.vitepress/theme/components/Pricing.vue'
 import Footer from '../.vitepress/theme/components/Footer.vue'
 
 const heroData = {
-  badge: '统一管理 · 智能归类 · 秒速查找',
-  title: '聊天记录 AI 智能助手',
-  subtitle: '统一管理微信、邮件、WhatsApp聊天记录，AI智能识别图片内容并自动归类，选择转发即可轻松完成',
+  badge: '微信记录永不丢失 · AI 智能整理 · 秒速找回',
+  githubUrl: 'https://github.com/cloud2ai/devify',
+  title: '微信聊天记录<br>再也不会消失了',
+  subtitle: '图片 30 天过期？换手机记录全没？一封转发邮件，AI 自动归档整理，永久保存，什么时候找都能找到。',
   points: [
     {
       icon: 'unified',
-      text: '微信、邮件、WhatsApp 聊天记录统一管理'
+      text: '微信、邮件、WhatsApp 聊天记录统一归档'
     },
     {
       icon: 'ai',
-      text: 'AI 识别图片内容 + 智能分析归类'
+      text: 'AI 识别截图文字、表格、图片内容'
     },
     {
       icon: 'search',
-      text: '秒速查找历史对话'
+      text: '三年前的消息，几个字就能找到'
     },
     {
       icon: 'process',
-      text: '选择 → 转发 → 轻松完成！'
+      text: '转发 → 自动处理 → 永久保存'
     }
   ],
-  primaryButtonText: '立即开始',
+  primaryButtonText: '免费开始使用',
   primaryButtonLink: 'https://app.aimychats.com/register',
-  secondaryButtonText: '查看功能',
+  secondaryButtonText: '查看功能介绍',
   secondaryButtonLink: '/zh/#features',
   carouselSlides: [
     {
+      image: '/images/wechat-pain-zh.png',
+      alt: '微信图片过期示意图',
+      title: '你是否也有这个烦恼？',
+      description: '微信图片 30 天后在电脑端消失，换手机聊天记录丢失，重要信息再也找不回来',
+      highlights: ['图片过期', '记录丢失']
+    },
+    {
       image: '/images/dashboard-list-zh.png',
-      alt: 'AImyChats 产品截图 - 列表页面',
-      title: '统一管理所有对话',
-      description: '微信、邮件、WhatsApp 聊天记录集中展示，一目了然，智能检索也在这个页面',
+      alt: 'AImyChats 产品截图 - 聊天记录列表',
+      title: '所有聊天记录，一个地方管起来',
+      description: '微信、邮件、WhatsApp 全部汇聚到同一个界面，永久保存，智能搜索随时可用',
       highlights: ['统一管理', '秒速查找']
     },
     {
-      image: '/images/detailed-zh.png',
-      alt: 'AImyChats 产品截图 - 详细页面',
-      title: '对话智能信息展示',
-      description: '统一管理微信、邮件、WhatsApp聊天记录，AI智能识别图片内容并自动归类，选择转发即可轻松完成',
-      highlights: []
+      image: '/images/ai-analysis-feature.png',
+      alt: 'AI 智能分析示意图',
+      title: 'AI 自动提炼关键信息',
+      description: '每条聊天记录自动生成摘要、提取待办、识别图片内容，不再需要手动翻阅',
+      highlights: ['自动摘要', '图文理解']
     }
   ],
   imageSrc: '/images/dashboard-list-zh.png',
@@ -58,128 +69,128 @@ const heroData = {
 }
 
 const howItWorksData = {
-  title: '简单三步开启智能聊天记录管理',
-  subtitle: '无需复杂配置，一分钟即可上手',
+  title: '三步搞定，一分钟上手',
+  subtitle: '不需要装插件，不需要授权微信，转发就能用',
   steps: [
     {
       icon: 'email',
-      title: '转发聊天记录',
-      description: '将微信、邮件等任何聊天记录转发到您的专属 AI 邮箱，系统自动接收处理。'
+      title: '转发聊天记录到专属邮箱',
+      description: '在微信里选择「更多」→「通过邮件发送」，或者截图后直接发邮件。发到您的专属 AI 邮箱，系统自动接收。'
     },
     {
       icon: 'ai',
-      title: 'AI 智能分析',
-      description: 'AI 自动提取关键信息、生成摘要、识别重点，帮您快速理解对话内容和待办事项。'
+      title: 'AI 自动识别与分析',
+      description: 'AI 自动提取关键信息、生成摘要、读懂图片内容，帮您识别重要待办和决策点，省去手动整理的时间。'
     },
     {
       icon: 'dashboard',
-      title: '永久保存回顾',
-      description: '所有聊天记录永久保存在云端，随时搜索查看。再也不怕记录丢失或过期！'
+      title: '永久存档，随时搜索',
+      description: '所有记录安全保存在云端，支持全文检索。换手机、清缓存都不影响。三年前的沟通细节，几秒就能找到。'
     }
   ]
 }
 
 const featuresData = {
-  title: '让聊天记录重新变得清晰',
-  subtitle: '跨平台统一管理 图文智能理解',
+  title: '解决微信用户最头疼的四个问题',
+  subtitle: '不只是备份，是真正让信息变得可用',
   features: [
     {
       icon: 'backup',
-      title: '所有对话都在一个地方',
-      description: '微信、邮件、客服消息……不再散落各处。一键转发自动整理、自动分类。所有沟通终于回到同一个空间。'
+      title: '图片永不过期，记录永不丢失',
+      description: '微信图片 30 天后在电脑端消失，换手机聊天记录经常找不回来。AImyChats 让所有内容永久保存在云端，图片、文件、截图一个都不少。'
     },
     {
       icon: 'search',
-      title: '你想找的内容瞬间出现',
-      description: '不是普通搜索。是基于文字、图片、联系人、场景的多维检索。快到像是直接跳到你想看的那一句。'
+      title: '找一条消息只需要几个字',
+      description: '不用再一条条往上翻，不用记得是哪天说的。输入关键词，跨平台、跨时间、跨联系人，瞬间定位到那句话。'
     },
     {
       icon: 'image',
-      title: '不仅理解文字也理解图片',
-      description: '截图、数据图表、UI设计、表格、照片。AI 全部能看懂。图文结合理解让每次摘要更完整、更可信。'
+      title: '截图里的内容也能被 AI 读懂',
+      description: '客户发来的报价截图、合同条款、设计稿、数据图表——AI 全部能识别和理解，让截图里的信息真正变得可搜索、可分析。'
     },
     {
       icon: 'backup',
-      title: '始终保存 永不丢失',
-      description: '换手机、清缓存、图片过期不再是问题。你的聊天记录在云端持续保存。随时随地都能打开。'
+      title: '微信、邮件、WhatsApp 一站管理',
+      description: '不同客户用不同平台沟通？AImyChats 把所有渠道的记录统一归档，不再需要在多个 App 间来回切换找信息。'
     }
   ]
 }
 
 const useCasesData = {
-  title: '谁需要聊天记录 AI 智能助手？',
-  subtitle: '只要您有重要对话需要保存和管理，AImyChats 就是您的最佳选择',
+  title: '哪些人最需要 AImyChats？',
+  subtitle: '只要你有重要的微信沟通需要留存，这个工具就是为你准备的',
   useCases: [
     {
-      icon: 'team',
-      role: '企业高管',
-      subtitle: '大量信息需要快速复盘',
-      description: '项目沟通、决策背景、团队讨论，AI 自动整理关键信息，让决策更高效。',
+      icon: 'sales',
+      role: '销售 / 客户经理',
+      subtitle: '客户说过的每句话都有据可查',
+      description: '客户在微信里谈的价格、需求、承诺，AI 自动整理成结构化记录，追责有凭据，复盘有数据。',
       benefits: [
-        '项目沟通自动归档',
-        '多场景 AI 分析（工作 / 产品 / 项目）',
-        '重要决策永久保存',
-        '决策依据快速追溯'
+        '客户沟通全程自动归档',
+        '需求变更有据可查',
+        '截图合同条款自动识别',
+        '秒级搜索任意历史沟通'
+      ]
+    },
+    {
+      icon: 'team',
+      role: '项目经理',
+      subtitle: '群聊里的决策不再石沉大海',
+      description: '项目群消息多、变更频繁、容易漏信息。AI 自动提炼每次讨论的关键决策、待办事项、责任人。',
+      benefits: [
+        '群聊讨论自动结构化整理',
+        '需求变更历史可追溯',
+        '待办事项自动提取',
+        '多个项目群统一管理'
       ]
     },
     {
       icon: 'lawyer',
-      role: '律师',
-      subtitle: '每条沟通都是关键证据',
-      description: '合同、客户咨询、证据信息散落多端，AI 自动结构化整理，快速找到关键内容。',
+      role: '律师 / 顾问',
+      subtitle: '每条沟通记录都是潜在证据',
+      description: '客户咨询、合同谈判、案件沟通分散在微信和邮件里。AI 自动结构化整理，关键内容一搜即达。',
       benefits: [
-        '多平台对话归档',
-        '图文结合理解证据',
-        '关键条款自动提炼',
-        '永久可查历史记录'
+        '多平台沟通统一归档',
+        '图片证据内容 AI 识别',
+        '关键条款和承诺自动提炼',
+        '永久可查的历史记录'
+      ]
+    },
+    {
+      icon: 'team',
+      role: '企业高管',
+      subtitle: '跨平台沟通全局一览',
+      description: '内部协作、客户沟通、合作谈判分散在微信、邮件多个渠道。AImyChats 让所有信息汇聚到一处，决策有迹可循。',
+      benefits: [
+        '跨渠道沟通统一管理',
+        '重要决策永久留存',
+        '多场景 AI 分析（项目 / 客户 / 内部）',
+        '快速追溯任意决策背景'
       ]
     },
     {
       icon: 'doctor',
-      role: '医生',
-      subtitle: '碎片化病情沟通不再遗漏',
-      description: '患者截图、检测报告、对话说明分散，AI 自动汇总整理，让病情跟踪更精准。',
+      role: '医生 / 咨询师',
+      subtitle: '患者沟通完整留存，随时可查',
+      description: '患者发来的检查报告截图、症状描述、复诊沟通——AI 自动归档识别，让每位患者的沟通历史完整清晰。',
       benefits: [
-        '检验单/处方自动识别',
-        '患者沟通永久留存',
-        '重点症状自动提炼',
-        '快速搜索患者历史'
+        '检验单 / 处方截图自动识别',
+        '患者沟通永久保存',
+        '关键症状和嘱咐自动提炼',
+        '快速调取任意患者历史'
       ]
     },
     {
       icon: 'finance',
       role: '金融顾问',
       subtitle: '客户沟通责任边界清晰',
-      description: '每次沟通都可能影响信任或业绩，AI 帮你记录、整理、追溯历史。',
+      description: '每次投资建议、客户确认、风险提示都有记录才安心。AI 帮你把分散在微信里的沟通整理成可追溯的档案。',
       benefits: [
-        '多端沟通统一管理',
-        '需求和承诺清晰记录',
-        '图文识别还原客户意图',
-        '历史沟通可追溯'
-      ]
-    },
-    {
-      icon: 'sales',
-      role: '客户经理',
-      subtitle: '高频客户沟通轻松管理',
-      description: '多平台客户沟通容易遗漏细节，AI 自动整理摘要和待办。',
-      benefits: [
-        '客户需求自动提炼',
-        '图片+文字理解',
-        '历史沟通秒速定位',
-        '一键生成销售摘要'
-      ]
-    },
-    {
-      icon: 'consultant',
-      role: '心理咨询师',
-      subtitle: '客户历史完整跟踪',
-      description: '沟通内容需要结构化保存，便于复盘和长期跟踪。',
-      benefits: [
-        '多渠道沟通自动保存',
-        'AI 自动整理要点与目标',
-        '长期跟踪轻松管理',
-        '历史记录随时查'
+        '投资沟通全程留档',
+        '客户确认内容清晰记录',
+        '截图识别还原客户意图',
+        '合规风险可追溯'
       ]
     }
   ]
@@ -187,27 +198,27 @@ const useCasesData = {
 
 const pricingData = {
   title: '选择适合您的方案',
-  subtitle: '灵活的定价，满足不同需求',
-  featuredLabel: '高性价比',
+  subtitle: '个人免费试用，专业用户按需付费',
+  featuredLabel: '最受欢迎',
   plans: [
     {
       name: '免费体验',
       description: ' ',
       price: '$0',
       period: '/ 月',
-      buttonText: '开始使用',
+      buttonText: '免费开始',
       buttonLink: 'https://app.aimychats.com/register',
       features: [
         '每月 5 组对话',
-        '每组附件图片 5 个',
-        '存储 1 GB',
+        '每组最多 5 个附件',
+        '存储空间 1 GB',
         '数据保留 30 天',
         'AI 图片识别',
         'AI 智能摘要',
         '基础智能分析',
         '基础搜索'
       ],
-      additionalInfo: '个人试用，体验核心功能，轻松管理少量重要对话。'
+      additionalInfo: '适合个人试用，完整体验核心功能，零门槛上手。'
     },
     {
       name: 'Starter',
@@ -218,8 +229,8 @@ const pricingData = {
       buttonLink: 'https://app.aimychats.com/register',
       features: [
         '每月 100 组对话',
-        '每组附件最多 10 个',
-        '存储 5 GB',
+        '每组最多 10 个附件',
+        '存储空间 5 GB',
         '数据保留 1 年',
         'AI 图片识别',
         'AI 智能摘要',
@@ -227,9 +238,9 @@ const pricingData = {
         '高级搜索',
         '元数据自动分析',
         '非图片附件保存与下载',
-        '多语言智能分析（英语/中文/西班牙语）'
+        '中英西三语智能分析'
       ],
-      additionalInfo: '日常聊天记录管理，高性价比，支持图片及其他附件内容，随时查阅和回顾。'
+      additionalInfo: '适合日常使用，高性价比，微信、邮件记录全面管理。'
     },
     {
       name: 'Standard',
@@ -241,8 +252,8 @@ const pricingData = {
       featured: true,
       features: [
         '每月 500 组对话',
-        '每组附件最多 15 个',
-        '存储 10 GB',
+        '每组最多 15 个附件',
+        '存储空间 10 GB',
         '数据保留 3 年',
         'AI 图片识别',
         'AI 智能摘要',
@@ -250,11 +261,11 @@ const pricingData = {
         '高级搜索',
         '元数据自动分析',
         '非图片附件保存与下载',
-        '多语言智能分析（英语/中文/西班牙语）',
+        '中英西三语智能分析',
         'IMAP 邮件自动收取（即将开放）',
-        '智能总结信息自动提交内部平台 (JIRA)（即将开放）'
+        '智能摘要对接 JIRA（即将开放）'
       ],
-      additionalInfo: '专业人士及中小企业团队使用，支持更多数据量与长期保存。'
+      additionalInfo: '适合专业人士和小团队，大量沟通记录长期存档。'
     },
     {
       name: 'Pro',
@@ -265,28 +276,28 @@ const pricingData = {
       buttonLink: 'https://app.aimychats.com/register',
       features: [
         '每月 2000 组对话',
-        '每组附件最多 25 个',
-        '存储 20 GB',
-        '永久保存',
+        '每组最多 25 个附件',
+        '存储空间 20 GB',
+        '数据永久保存',
         'AI 图片识别',
         'AI 智能摘要',
         '多场景智能分析',
         '高级搜索',
         '元数据自动分析',
         '非图片附件保存与下载',
-        '多语言智能分析（英语/中文/西班牙语）',
+        '中英西三语智能分析',
         'IMAP 邮件自动收取（即将开放）',
-        '智能总结信息自动提交内部平台 (JIRA)（即将开放）'
+        '智能摘要对接 JIRA（即将开放）'
       ],
-      additionalInfo: '企业用户大量数据处理及长期保存，图文结合分析，信息管理再也不丢失。'
+      additionalInfo: '适合企业级数据量，图文结合分析，所有沟通记录永久留存。'
     }
   ],
-  note: '所有付费方案均可随时升级或降级，按月计费，随时可取消。'
+  note: '所有付费方案均可随时升降级，按月计费，随时取消，无任何违约金。'
 }
 
 const footerData = {
   companyName: 'AImyChats',
-  companyDescription: '聊天记录 AI 智能助手，让重要对话永不丢失，随时回顾。',
+  companyDescription: '微信聊天记录永不丢失，AI 智能整理，随时找得到。',
   copyright: '',
   productTitle: '产品',
   resourceTitle: '资源',
@@ -301,7 +312,7 @@ const footerData = {
   ],
   resourceLinks: [
     { text: '常见问题', url: '/zh/faq' },
-    { text: '使用说明', url: '/zh/guide/wechat-backup' }
+    { text: '微信备份指南', url: '/zh/guide/wechat-backup' }
   ],
   companyLinks: [],
   aboutLinks: [
@@ -315,8 +326,24 @@ const footerData = {
 </script>
 
 <Hero v-bind="heroData" />
+<SocialProof :items="[
+  { icon: '💬', value: '4 个平台', label: '微信 · 邮件 · WhatsApp · SMTP' },
+  { icon: '🤖', value: 'AI 全解析', label: '图片 · 文字 · 截图 · 附件' },
+  { icon: '♾️', value: '永久保存', label: 'Pro 方案数据永不过期' },
+  { icon: '🔓', value: '完全开源', label: '代码透明可自部署' },
+]" />
 <Features v-bind="featuresData" />
+<WeChatGuide />
 <HowItWorks v-bind="howItWorksData" />
 <UseCases v-bind="useCasesData" />
 <Pricing v-bind="pricingData" />
+<OpenSourceBanner
+  github-url="https://github.com/cloud2ai/devify"
+  badge-text="完全开源"
+  heading-line1="AImyChats 背后的引擎"
+  heading-line2="Devify 已在 GitHub 开源"
+  description="核心处理逻辑、AI 分析流程、邮件接收系统全部代码公开透明。你可以自己部署、审查代码，也可以为项目贡献改进。"
+  view-repo-text="查看 GitHub 仓库"
+  star-text="给项目 Star"
+/>
 <Footer v-bind="footerData" />

@@ -170,7 +170,7 @@ defineProps({
 
 <style scoped>
 .footer-wrapper {
-  background: linear-gradient(135deg, #1e1b4b 0%, #312e81 50%, #1e3a8a 100%);
+  background: #0f172a;
   position: relative;
 }
 

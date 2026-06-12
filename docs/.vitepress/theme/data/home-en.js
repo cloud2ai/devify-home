@@ -1,295 +1,304 @@
 export const getHomeEnContent = () => ({
   heroData: {
-    badge: 'Unified Management · Smart Organization · Instant Search',
-    title: 'AI Chat History Assistant',
-    subtitle: 'Unified management for WeChat, Email, WhatsApp conversations, AI intelligently recognizes image content and automatically categorizes, select and forward to complete easily',
+    badge: 'Email · WhatsApp · WeChat — One Unified Inbox',
+    githubUrl: 'https://github.com/cloud2ai/devify',
+    title: 'Never Lose an Important<br>Conversation Again',
+    subtitle: 'Connect your Gmail or Outlook directly via SMTP, or forward any chat to your AI inbox. Every message analyzed, permanently archived, and searchable in seconds.',
     points: [
       {
         icon: 'unified',
-        text: 'Unified management for WeChat, Email, WhatsApp conversations'
+        text: 'Email, WhatsApp, WeChat — all in one place'
       },
       {
         icon: 'ai',
-        text: 'AI recognizes image content + intelligent analysis and categorization'
+        text: 'AI reads text, images, screenshots, and documents'
       },
       {
         icon: 'search',
-        text: 'Find historical conversations instantly'
+        text: 'Find any message from years ago instantly'
       },
       {
         icon: 'process',
-        text: 'Select → Forward → Done!'
+        text: 'Forward → AI processes → Permanently saved'
       }
     ],
-    primaryButtonText: 'Get Started',
+    primaryButtonText: 'Start for Free',
     primaryButtonLink: 'https://app.aimychats.com/register',
-    secondaryButtonText: 'View Features',
+    secondaryButtonText: 'See How It Works',
     secondaryButtonLink: '/#features',
     carouselSlides: [
       {
-        image: '/images/dashboard-list-en.png',
-        alt: 'AImyChats product screenshot - List view',
-        title: 'Unified Conversation Management',
+        image: '/images/unified-inbox-en.png',
+        alt: 'Email, WhatsApp, WeChat — all flowing into one AI inbox',
+        title: 'Every Platform. One Inbox.',
         description:
-          'WeChat, Email, WhatsApp conversations all in one place, smart search also available on this page',
-        highlights: ['Unified management', 'Instant search']
+          'Gmail, WhatsApp, WeChat — all your conversations flow into a single AI-powered archive, organized automatically',
+        highlights: ['Multi-platform', 'AI-powered']
       },
       {
-        image: '/images/detailed-en.png',
-        alt: 'AImyChats product screenshot - Detailed view',
-        title: 'Conversation Intelligent Information Display',
+        image: '/images/dashboard-list-en.png',
+        alt: 'AImyChats - Unified conversation dashboard',
+        title: 'All Your Conversations, One Place',
         description:
-          'Unified management for WeChat, Email, WhatsApp conversations, AI intelligently recognizes image content and automatically categorizes, select and forward to complete easily',
-        highlights: []
+          'Email threads, WhatsApp chats, WeChat exports — unified and searchable in a single dashboard',
+        highlights: ['Unified inbox', 'Instant search']
+      },
+      {
+        image: '/images/ai-analysis-feature.png',
+        alt: 'AI extracts summaries, action items, and key decisions',
+        title: 'AI Extracts What Actually Matters',
+        description:
+          'Every conversation automatically summarized, key decisions highlighted, action items pulled out — no manual reading needed',
+        highlights: ['Auto summary', 'Structured output']
       }
     ],
     imageSrc: '/images/dashboard-list-en.png',
-    imageAlt: 'AImyChats product screenshot - List view',
+    imageAlt: 'AImyChats product screenshot',
     features: []
   },
   howItWorksData: {
-    title: 'Get Started in 3 Simple Steps',
-    subtitle: 'No complex configuration required, get started in minutes',
+    title: 'Three Ways to Get Started',
+    subtitle: 'Connect your inbox directly, or forward anything manually — your choice',
     steps: [
       {
         icon: 'email',
-        title: 'Forward Chat History',
+        title: 'Connect Your Email via SMTP',
         description:
-          'Forward WeChat, email, or any chat history to your dedicated AI inbox. The system automatically receives and processes it.'
+          'Link your Gmail, Outlook, or any IMAP/SMTP inbox directly. New emails are pulled in and processed automatically — no forwarding needed. Or simply forward any conversation to your dedicated AI inbox.'
       },
       {
         icon: 'ai',
-        title: 'AI Intelligent Analysis',
+        title: 'AI Reads and Analyzes Everything',
         description:
-          'AI automatically extracts key information, generates summaries, and identifies important points to help you quickly understand conversation content and action items.'
+          'The AI reads every message, understands images and screenshots, extracts key decisions, flags action items, and generates a clean summary — automatically, for every conversation.'
       },
       {
         icon: 'dashboard',
-        title: 'Permanent Storage & Review',
+        title: 'Search Everything, Forever',
         description:
-          'All chat history is permanently saved in the cloud. Search and review anytime. Never worry about losing records or expiration!'
+          'Every conversation is permanently stored in the cloud. Full-text search across all platforms and all time. Switch devices, clear cache — nothing is ever lost.'
       }
     ]
   },
   featuresData: {
-    title: 'Make Chat History Clear Again',
-    subtitle: 'Unified Cross-Platform Management · Intelligent Text & Image Understanding',
+    title: 'Your Conversations, Finally Under Control',
+    subtitle: 'Unified inbox · AI that reads images · Permanent cloud archive',
     features: [
       {
         icon: 'backup',
-        title: 'All Conversations in One Place',
+        title: 'Every Platform, One Place',
         description:
-          'WeChat, email, customer service messages... No longer scattered everywhere. One-click forwarding automatically organizes and categorizes. All communications finally return to the same space.'
+          'Stop switching between Gmail, WhatsApp, and WeChat to piece together what happened. One forward and everything lives in one searchable archive — organized automatically.'
       },
       {
         icon: 'search',
-        title: 'Find What You Need Instantly',
+        title: 'Find Anything in Seconds',
         description:
-          "Not just ordinary search. It's multi-dimensional retrieval based on text, images, contacts, and scenarios. So fast it feels like jumping directly to the line you want to see."
+          "Not just keyword search. Multi-dimensional retrieval across senders, dates, topics, and platforms. That contract detail from 18 months ago? Found before you finish typing."
       },
       {
         icon: 'image',
-        title: 'Understands Both Text and Images',
+        title: 'AI That Reads Your Screenshots',
         description:
-          'Screenshots, data charts, UI designs, tables, photos. AI understands it all. Combined text and image understanding makes every summary more complete and reliable.'
+          'Price quotes, contract snapshots, design files, data charts — if it was sent as an image, AI can read it. Screenshot content becomes searchable, summarizable, and actionable.'
       },
       {
         icon: 'backup',
-        title: 'Always Saved, Never Lost',
+        title: 'Permanent Archive, Zero Maintenance',
         description:
-          'Changing phones, clearing cache, expired images are no longer problems. Your chat history is continuously saved in the cloud. Access it anytime, anywhere.'
+          'WhatsApp media expires. Phones get replaced. Email inboxes get cleared. AImyChats keeps everything indefinitely in the cloud — access it anytime, from any device.'
       }
     ]
   },
   useCasesData: {
-    title: 'Who Needs Chat History AI Assistant?',
-    subtitle: 'If you have important conversations to save and manage, AImyChats is your best choice',
+    title: 'Who Uses AImyChats?',
+    subtitle: 'Anyone who needs to find, prove, or remember something from a past conversation',
     useCases: [
       {
-        icon: 'team',
-        role: 'Enterprise Executives',
-        subtitle: 'Large amounts of information need quick review',
+        icon: 'sales',
+        role: 'Account Managers',
+        subtitle: 'Every client promise, on record',
         description:
-          'Project communications, decision backgrounds, team discussions. AI automatically organizes key information to make decisions more efficient.',
+          'Client discussions span WhatsApp, email, and calls. AI automatically archives and summarizes every interaction so you can reference exactly what was agreed.',
         benefits: [
-          'Automatic project communication archiving',
-          'Multi-scenario AI analysis (Work / Product / Project)',
-          'Important decisions permanently saved',
-          'Quick traceability of decision basis'
+          'Multi-platform client communications archived',
+          'Commitments and requirements clearly recorded',
+          'Screenshot content (quotes, specs) auto-extracted',
+          'Instant search across all client history'
         ]
       },
       {
         icon: 'lawyer',
         role: 'Lawyers',
-        subtitle: 'Every communication is key evidence',
+        subtitle: 'Communications that hold up as evidence',
         description:
-          'Contracts, client consultations, evidence scattered across platforms. AI automatically structures and organizes to quickly find key content.',
+          'Client consultations, contract negotiations, case evidence — scattered across platforms. AI structures it all into a searchable, permanent record.',
         benefits: [
           'Multi-platform conversation archiving',
-          'Combined text and image evidence understanding',
-          'Key clauses automatically extracted',
-          'Permanently searchable historical records'
+          'Image and document content AI-analyzed',
+          'Key clauses and commitments auto-extracted',
+          'Permanent, searchable case history'
+        ]
+      },
+      {
+        icon: 'team',
+        role: 'Project Managers',
+        subtitle: 'Decisions buried in group chats, surfaced',
+        description:
+          'Requirement changes, approval threads, action items — lost in long group chats. AI extracts decisions and to-dos automatically.',
+        benefits: [
+          'Group chat discussions structured automatically',
+          'Requirement change history traceable',
+          'Action items and owners auto-identified',
+          'Multiple project channels in one view'
+        ]
+      },
+      {
+        icon: 'team',
+        role: 'Executives',
+        subtitle: 'Cross-channel clarity, at scale',
+        description:
+          'Strategic decisions happen across email, messaging, and calls. AI consolidates it all so you can trace any decision back to its source.',
+        benefits: [
+          'All communication channels unified',
+          'Key decisions permanently preserved',
+          'Multi-scenario AI analysis (projects, clients, internal)',
+          'Decision context retrievable on demand'
         ]
       },
       {
         icon: 'doctor',
-        role: 'Doctors',
-        subtitle: 'Fragmented patient communications no longer missed',
+        role: 'Healthcare Professionals',
+        subtitle: 'Complete patient communication history',
         description:
-          'Patient screenshots, test reports, conversation notes scattered. AI automatically summarizes and organizes for more accurate patient tracking.',
+          'Lab reports shared as images, symptoms described over chat, follow-up notes via email — AI archives and organizes it all for accurate patient tracking.',
         benefits: [
-          'Automatic test report/prescription recognition',
-          'Patient communications permanently preserved',
-          'Key symptoms automatically extracted',
-          'Quick search of patient history'
+          'Lab results and prescriptions auto-recognized',
+          'Patient communication permanently preserved',
+          'Key symptoms and instructions extracted',
+          'Instant access to full patient history'
         ]
       },
       {
         icon: 'finance',
         role: 'Financial Advisors',
-        subtitle: 'Clear boundaries in client communications',
+        subtitle: 'Every recommendation, documented',
         description:
-          'Every communication may affect trust or performance. AI helps you record, organize, and trace history.',
+          'Client conversations about investments, risks, and decisions need to be on record. AI turns scattered messages into a traceable, compliant archive.',
         benefits: [
-          'Unified multi-platform communication management',
-          'Clear recording of needs and commitments',
-          'Image and text recognition restores client intent',
-          'Traceable communication history'
-        ]
-      },
-      {
-        icon: 'sales',
-        role: 'Account Managers',
-        subtitle: 'Easy management of frequent client communications',
-        description:
-          'Multi-platform client communications easily miss details. AI automatically organizes summaries and action items.',
-        benefits: [
-          'Client needs automatically extracted',
-          'Image + text understanding',
-          'Instant location of historical communications',
-          'One-click sales summary generation'
-        ]
-      },
-      {
-        icon: 'consultant',
-        role: 'Psychotherapists',
-        subtitle: 'Complete client history tracking',
-        description:
-          'Communication content needs structured preservation for review and long-term tracking.',
-        benefits: [
-          'Automatic multi-channel communication saving',
-          'AI automatically organizes key points and goals',
-          'Easy long-term tracking management',
-          'Historical records accessible anytime'
+          'Investment conversations fully documented',
+          'Client confirmations clearly recorded',
+          'Screenshot-based intent auto-captured',
+          'Traceable history for compliance needs'
         ]
       }
     ]
   },
   pricingData: {
-    title: 'Choose Your Plan',
-    subtitle: 'Flexible pricing to meet different needs',
-    featuredLabel: 'Best Value',
+    title: 'Simple, Honest Pricing',
+    subtitle: 'Start free. Upgrade when you need more.',
+    featuredLabel: 'Most Popular',
     plans: [
       {
-        name: 'Free Trial',
+        name: 'Free',
         description: ' ',
         price: '$0',
         period: '/month',
-        buttonText: 'Get Started',
+        buttonText: 'Start for Free',
         buttonLink: 'https://app.aimychats.com/register',
         features: [
-          '5 conversation groups per month',
-          '5 attachments per group',
+          '5 conversation groups/month',
+          'Up to 5 attachments per group',
           '1 GB storage',
           '30-day retention',
           'AI Image Recognition',
           'AI Smart Summary',
-          'Basic Intelligent Analysis',
+          'Basic Analysis',
           'Basic Search'
         ],
         additionalInfo:
-          'Perfect for personal trial, experience core features, easily manage a small number of important conversations.'
+          'Try the full experience with no commitment. Perfect for occasional use.'
       },
       {
         name: 'Starter',
-        description: 'Individual Users',
+        description: 'Personal Use',
         price: '$4.99',
         period: '/month',
-        buttonText: 'Subscribe Now',
+        buttonText: 'Get Started',
         buttonLink: 'https://app.aimychats.com/register',
         features: [
-          '100 conversation groups per month',
+          '100 conversation groups/month',
           'Up to 10 attachments per group',
           '5 GB storage',
           '1-year retention',
           'AI Image Recognition',
           'AI Smart Summary',
-          'Multi-Scenario Intelligent Analysis',
+          'Multi-Scenario Analysis',
           'Advanced Search',
           'Metadata Auto-Analysis',
-          'Non-Image Attachment Save & Download',
-          'Multi-Language Intelligent Analysis (English/Chinese/Spanish)'
+          'File Attachment Download',
+          'English / Chinese / Spanish Analysis'
         ],
         additionalInfo:
-          'Daily chat history management, great value, supports images and other attachments, review anytime.'
+          'Great for individuals managing daily conversations across platforms.'
       },
       {
         name: 'Standard',
-        description: 'Professional Users',
+        description: 'Professional',
         price: '$9.90',
         period: '/month',
-        buttonText: 'Subscribe Now',
+        buttonText: 'Get Started',
         buttonLink: 'https://app.aimychats.com/register',
         featured: true,
         features: [
-          '500 conversation groups per month',
+          '500 conversation groups/month',
           'Up to 15 attachments per group',
           '10 GB storage',
           '3-year retention',
           'AI Image Recognition',
           'AI Smart Summary',
-          'Multi-Scenario Intelligent Analysis',
+          'Multi-Scenario Analysis',
           'Advanced Search',
           'Metadata Auto-Analysis',
-          'Non-Image Attachment Save & Download',
-          'Multi-Language Intelligent Analysis (English/Chinese/Spanish)',
+          'File Attachment Download',
+          'English / Chinese / Spanish Analysis',
           'IMAP Email Auto-Collection (Coming Soon)',
-          'Smart Summary Auto-Submit to Internal Platform (JIRA) (Coming Soon)'
+          'Auto-submit to JIRA (Coming Soon)'
         ],
         additionalInfo:
-          'For professionals and small-to-medium business teams, supports more data volume and long-term storage.'
+          'Built for professionals and small teams who need volume, history, and reliability.'
       },
       {
         name: 'Pro',
-        description: 'Enterprise Users',
+        description: 'Enterprise',
         price: '$29.99',
         period: '/month',
-        buttonText: 'Subscribe Now',
+        buttonText: 'Get Started',
         buttonLink: 'https://app.aimychats.com/register',
         features: [
-          '2000 conversation groups per month',
+          '2000 conversation groups/month',
           'Up to 25 attachments per group',
           '20 GB storage',
-          'Permanent Storage',
+          'Permanent retention',
           'AI Image Recognition',
           'AI Smart Summary',
-          'Multi-Scenario Intelligent Analysis',
+          'Multi-Scenario Analysis',
           'Advanced Search',
           'Metadata Auto-Analysis',
-          'Non-Image Attachment Save & Download',
-          'Multi-Language Intelligent Analysis (English/Chinese/Spanish)',
+          'File Attachment Download',
+          'English / Chinese / Spanish Analysis',
           'IMAP Email Auto-Collection (Coming Soon)',
-          'Smart Summary Auto-Submit to Internal Platform (JIRA) (Coming Soon)'
+          'Auto-submit to JIRA (Coming Soon)'
         ],
         additionalInfo:
-          'For enterprise users handling large data volumes and long-term storage, combined text and image analysis, information management never lost.'
+          'For organizations that need maximum volume, permanent archive, and deep AI analysis.'
       }
     ],
-    note: 'All paid plans can be upgraded or downgraded anytime. Monthly billing, cancel anytime.'
+    note: 'All plans billed monthly. Upgrade, downgrade, or cancel anytime — no lock-in.'
   },
   footerData: {
     companyName: 'AImyChats',
-    companyDescription: 'AI Chat History Assistant - Never lose important conversations, review anytime.',
+    companyDescription: 'AI-powered conversation archive. Never lose an important message again.',
     copyright: '',
     productTitle: 'Product',
     resourceTitle: 'Resources',

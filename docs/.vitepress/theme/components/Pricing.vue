@@ -162,7 +162,7 @@ const isFeaturedFeature = (feature) => {
 
 <style scoped>
 .pricing-wrapper {
-  background: linear-gradient(to bottom, #f9fafb 0%, #ffffff 100%);
+  background: #f8fafc;
 }
 
 .pricing-wrapper::before {

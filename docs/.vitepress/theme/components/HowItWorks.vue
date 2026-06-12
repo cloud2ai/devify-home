@@ -96,28 +96,7 @@ const formattedTitleMobile = computed(() => {
 <style scoped>
 .how-it-works-wrapper {
   position: relative;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-}
-
-.how-it-works-wrapper::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background:
-    radial-gradient(circle at 30% 20%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
-    radial-gradient(circle at 70% 80%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
-}
-
-.how-it-works-wrapper :deep(h2),
-.how-it-works-wrapper :deep(p),
-.how-it-works-wrapper :deep(h3) {
-  color: white !important;
-}
-
-
-.how-it-works-wrapper :deep(.text-gray-600),
-.how-it-works-wrapper :deep(.text-gray-700) {
-  color: rgba(255, 255, 255, 0.9) !important;
+  background: #f8fafc;
 }
 
 </style>

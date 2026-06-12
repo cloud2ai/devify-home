@@ -88,13 +88,7 @@ export default defineConfig({
   vite: {
     server: {
       host: '0.0.0.0',
-      port: 5173,
       strictPort: false,
-      hmr: {
-        protocol: 'ws',
-        host: '192.168.8.182',
-        port: 5173
-      }
     },
     resolve: {
       alias: {

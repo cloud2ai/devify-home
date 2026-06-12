@@ -4,11 +4,59 @@
 
 /* Custom styles for VitePress theme */
 :root {
-  --vp-c-brand: #2563eb;
-  --vp-c-brand-light: #3b82f6;
-  --vp-c-brand-lighter: #60a5fa;
-  --vp-c-brand-dark: #1d4ed8;
-  --vp-c-brand-darker: #1e40af;
+  --vp-c-brand: #6366f1;
+  --vp-c-brand-light: #818cf8;
+  --vp-c-brand-lighter: #a5b4fc;
+  --vp-c-brand-dark: #4f46e5;
+  --vp-c-brand-darker: #4338ca;
+
+  --vp-nav-bg-color: #ffffff;
+}
+
+/* ── Light navbar ── */
+.VPNav {
+  background: #ffffff !important;
+  border-bottom: 1px solid #e2e8f0 !important;
+  backdrop-filter: none !important;
+}
+
+.VPNavBar {
+  background: #ffffff !important;
+  border-bottom: none !important;
+}
+
+.VPNavBar .title,
+.VPNavBar .VPNavBarTitle .title {
+  color: #0f172a !important;
+}
+
+.VPNavBar .VPNavBarMenu .VPNavBarMenuLink,
+.VPNavBar .VPNavBarMenuLink {
+  color: #475569 !important;
+}
+
+.VPNavBar .VPNavBarMenuLink:hover,
+.VPNavBar .VPNavBarMenuLink.active {
+  color: #6366f1 !important;
+}
+
+/* Site title */
+.VPNavBarTitle a {
+  color: #0f172a !important;
+}
+
+.VPNavBarTitle a:hover {
+  color: #6366f1 !important;
+}
+
+/* Logo — no brightness override needed on white bg */
+.VPNavBarTitle .logo {
+  filter: none;
+}
+
+/* Divider between nav and content — remove white line */
+.VPContent {
+  padding-top: 0 !important;
 }
 
 /* Hide default VitePress language switcher */
