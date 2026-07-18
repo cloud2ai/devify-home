@@ -15,8 +15,8 @@ export default defineConfig({
           { text: 'Home', link: '/' },
           { text: 'Features', link: '/#features' },
           { text: 'Pricing', link: '/#pricing' },
-          { text: 'Open Source', link: '/en/self-hosting/installation' },
-          { text: 'Help', link: '/en/faq' },
+          { text: 'Self-Hosting', link: '/en/self-hosting/installation' },
+          { text: 'User Guide', link: '/en/self-hosting/user-guide' },
           { text: 'GitHub', link: 'https://github.com/cloud2ai/devify' }
         ],
         sidebar: {
@@ -31,7 +31,7 @@ export default defineConfig({
           ],
           '/en/self-hosting/': [
             {
-              text: 'Open Source (Self-Hosting)',
+              text: 'Self-Hosting',
               items: [
                 { text: 'Installation', link: '/en/self-hosting/installation' },
                 { text: 'User Guide', link: '/en/self-hosting/user-guide' }
@@ -55,8 +55,8 @@ export default defineConfig({
           { text: '首页', link: '/zh/' },
           { text: '功能', link: '/zh/#features' },
           { text: '价格', link: '/zh/#pricing' },
-          { text: '开源自部署', link: '/zh/self-hosting/installation' },
-          { text: '帮助', link: '/zh/faq' },
+          { text: '私有化部署', link: '/zh/self-hosting/installation' },
+          { text: '使用帮助', link: '/zh/self-hosting/user-guide' },
           { text: 'GitHub', link: 'https://github.com/cloud2ai/devify' }
         ],
         sidebar: {
@@ -71,7 +71,7 @@ export default defineConfig({
           ],
           '/zh/self-hosting/': [
             {
-              text: '开源自部署',
+              text: '私有化部署',
               items: [
                 { text: '安装指南', link: '/zh/self-hosting/installation' },
                 { text: '使用手册', link: '/zh/self-hosting/user-guide' }
