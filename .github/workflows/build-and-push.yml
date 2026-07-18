@@ -66,18 +66,12 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
             set -e
-            docker pull ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest
-            docker stop devify-home || true
-            docker rm devify-home || true
-            docker run -d \
-              --name devify-home \
-              --restart unless-stopped \
-              --network devify_devify_network \
-              --expose 80 \
-              --health-cmd='sh -c "wget -Y off --quiet --tries=1 --spider http://127.0.0.1 || exit 1"' \
-              --health-interval=30s \
-              --health-timeout=10s \
-              --health-retries=3 \
-              --health-start-period=60s \
-              ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest
+            # Refresh the homepage through the compose stack so devify-home
+            # stays managed by devify-deploy. A standalone `docker run` here
+            # creates an unmanaged container that collides with the compose
+            # stack on the "devify-home" name and breaks the next full app
+            # deploy (cloud2ai/devify-deploy#2).
+            cd ~/devify-deploy
+            git pull --ff-only origin main || true
+            ./scripts/devify-deploy.sh update-home
             docker image prune -f
