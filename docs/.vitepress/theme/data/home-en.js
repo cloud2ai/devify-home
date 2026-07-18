@@ -3,7 +3,7 @@ export const getHomeEnContent = () => ({
     badge: 'Email · WhatsApp · WeChat — One Unified Inbox',
     githubUrl: 'https://github.com/cloud2ai/devify',
     title: 'Never Lose an Important<br>Conversation Again',
-    subtitle: 'Connect your Gmail or Outlook directly via SMTP, or forward any chat to your AI inbox. Every message analyzed, permanently archived, and searchable in seconds.',
+    subtitle: 'Connect your Gmail or Outlook directly via IMAP, or forward any chat to your AI inbox. Every message analyzed, permanently archived, and searchable in seconds.',
     points: [
       {
         icon: 'unified',
@@ -62,9 +62,9 @@ export const getHomeEnContent = () => ({
     steps: [
       {
         icon: 'email',
-        title: 'Connect Your Email via SMTP',
+        title: 'Connect Your Email via IMAP',
         description:
-          'Link your Gmail, Outlook, or any IMAP/SMTP inbox directly. New emails are pulled in and processed automatically — no forwarding needed. Or simply forward any conversation to your dedicated AI inbox.'
+          'Link your Gmail, Outlook, or any IMAP inbox directly. New emails are pulled in and processed automatically — no forwarding needed. Or simply forward any conversation to your dedicated AI inbox.'
       },
       {
         icon: 'ai',
