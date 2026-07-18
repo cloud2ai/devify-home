@@ -15,7 +15,9 @@ export default defineConfig({
           { text: 'Home', link: '/' },
           { text: 'Features', link: '/#features' },
           { text: 'Pricing', link: '/#pricing' },
-          { text: 'Help', link: '/en/faq' }
+          { text: 'Open Source', link: '/en/self-hosting/installation' },
+          { text: 'Help', link: '/en/faq' },
+          { text: 'GitHub', link: 'https://github.com/cloud2ai/devify' }
         ],
         sidebar: {
           '/en/guide/': [
@@ -24,6 +26,15 @@ export default defineConfig({
               items: [
                 { text: 'Getting Started', link: '/en/guide/getting-started' },
                 { text: 'Integrations', link: '/en/guide/integrations' }
+              ]
+            }
+          ],
+          '/en/self-hosting/': [
+            {
+              text: 'Open Source (Self-Hosting)',
+              items: [
+                { text: 'Installation', link: '/en/self-hosting/installation' },
+                { text: 'User Guide', link: '/en/self-hosting/user-guide' }
               ]
             }
           ]
@@ -44,7 +55,9 @@ export default defineConfig({
           { text: '首页', link: '/zh/' },
           { text: '功能', link: '/zh/#features' },
           { text: '价格', link: '/zh/#pricing' },
-          { text: '帮助', link: '/zh/faq' }
+          { text: '开源自部署', link: '/zh/self-hosting/installation' },
+          { text: '帮助', link: '/zh/faq' },
+          { text: 'GitHub', link: 'https://github.com/cloud2ai/devify' }
         ],
         sidebar: {
           '/zh/guide/': [
@@ -53,6 +66,15 @@ export default defineConfig({
               items: [
                 { text: '微信备份', link: '/zh/guide/wechat-backup' },
                 { text: '功能说明', link: '/zh/guide/features' }
+              ]
+            }
+          ],
+          '/zh/self-hosting/': [
+            {
+              text: '开源自部署',
+              items: [
+                { text: '安装指南', link: '/zh/self-hosting/installation' },
+                { text: '使用手册', link: '/zh/self-hosting/user-guide' }
               ]
             }
           ]
