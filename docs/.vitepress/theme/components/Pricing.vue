@@ -83,6 +83,20 @@
         </div>
       </div>
 
+      <!-- Private deployment CTA — parallel to the fixed-price tiers above -->
+      <div v-if="contactCta" class="contact-cta-strip">
+        <div class="contact-cta-text">
+          <h3 class="contact-cta-title">{{ contactCta.title }}</h3>
+          <p class="contact-cta-desc">{{ contactCta.description }}</p>
+        </div>
+        <a href="#" class="contact-cta-button" @click.prevent="openMail(contactCta.mailto)">
+          {{ contactCta.buttonText }}
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+          </svg>
+        </a>
+      </div>
+
       <!-- FAQ or Additional Info -->
       <div v-if="note" class="mt-8 text-center">
         <p class="text-gray-600">
@@ -101,6 +115,8 @@
 </template>
 
 <script setup>
+import { openMail } from '../utils/mailto.js'
+
 defineProps({
   title: {
     type: String,
@@ -125,6 +141,10 @@ defineProps({
   comparisonHint: {
     type: String,
     default: ''
+  },
+  contactCta: {
+    type: Object,
+    default: null
   }
 })
 
@@ -238,5 +258,65 @@ const isFeaturedFeature = (feature) => {
   .pricing-card {
     @apply p-6;
   }
+}
+
+/* Private-deployment CTA strip — sits parallel to the fixed-price tiers */
+.contact-cta-strip {
+  position: relative;
+  z-index: 1;
+  margin-top: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.75rem 2rem;
+  border-radius: 1rem;
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.05), rgba(139, 92, 246, 0.05));
+  border: 1px solid rgba(99, 102, 241, 0.16);
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .contact-cta-strip {
+    flex-direction: row;
+    text-align: left;
+    padding: 1.75rem 2.5rem;
+  }
+}
+
+.contact-cta-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #1e1b4b;
+  margin-bottom: 0.3rem;
+}
+
+.contact-cta-desc {
+  font-size: 0.9rem;
+  color: #64748b;
+  line-height: 1.6;
+}
+
+.contact-cta-button {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.7rem 1.5rem;
+  border-radius: 0.6rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+  color: white;
+  text-decoration: none;
+  box-shadow: 0 4px 14px rgba(99, 102, 241, 0.3);
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.contact-cta-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(99, 102, 241, 0.4);
 }
 </style>

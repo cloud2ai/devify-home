@@ -294,7 +294,36 @@ export const getHomeEnContent = () => ({
           'For organizations that need maximum volume, permanent archive, and deep AI analysis.'
       }
     ],
-    note: 'All plans billed monthly. Upgrade, downgrade, or cancel anytime — no lock-in.'
+    note: 'All plans billed monthly. Upgrade, downgrade, or cancel anytime — no lock-in.',
+    contactCta: {
+      title: 'Need a private deployment?',
+      description: 'Data residency, custom scale, or a fully private environment — let\'s talk about what you need.',
+      buttonText: 'Contact us',
+      mailto: { user: 'opensource', domain: 'oneprocloud.com', subject: 'Private Deployment Inquiry' }
+    }
+  },
+  contactData: {
+    title: 'Talk to a human',
+    subtitle: 'Two inboxes, two purposes — reach the right one.',
+    ctaLabel: 'Email us',
+    items: [
+      {
+        icon: 'deploy',
+        title: 'Open-Source Deployment',
+        description: 'Planning to self-host Devify? We can help you scope the setup.',
+        user: 'opensource',
+        domain: 'oneprocloud.com',
+        subject: 'Open-Source Deployment Consulting'
+      },
+      {
+        icon: 'support',
+        title: 'Technical Support',
+        description: 'Running into an issue with your account or the platform?',
+        user: 'support',
+        domain: 'oneprocloud.com',
+        subject: 'Technical Support Request'
+      }
+    ]
   },
   footerData: {
     companyName: 'AImyChats',
@@ -302,7 +331,7 @@ export const getHomeEnContent = () => ({
     copyright: '',
     productTitle: 'Product',
     resourceTitle: 'Resources',
-    companyTitle: '',
+    companyTitle: 'Contact',
     aboutTitle: 'About',
     socialLinks: [
       { icon: 'github', url: 'https://github.com/cloud2ai/devify', name: 'GitHub' }
@@ -315,7 +344,10 @@ export const getHomeEnContent = () => ({
       { text: 'FAQ', url: '/en/faq' },
       { text: 'Quick Guide', url: '/en/guide/getting-started' }
     ],
-    companyLinks: [],
+    companyLinks: [
+      { text: 'Open-Source Deployment', mailto: { user: 'opensource', domain: 'oneprocloud.com' } },
+      { text: 'Technical Support', mailto: { user: 'support', domain: 'oneprocloud.com' } }
+    ],
     aboutLinks: [
       { text: 'About Us', url: '/en/about' }
     ],

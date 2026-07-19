@@ -64,6 +64,15 @@
           <ul class="space-y-1.5">
             <li v-for="(link, index) in companyLinks" :key="index">
               <a
+                v-if="link.mailto"
+                href="#"
+                class="text-sm hover:text-white transition-colors duration-200 inline-flex items-center py-0.5"
+                @click.prevent="openMail(link.mailto)"
+              >
+                {{ link.text }}
+              </a>
+              <a
+                v-else
                 :href="link.url"
                 class="text-sm hover:text-white transition-colors duration-200 inline-flex items-center py-0.5"
               >
@@ -112,6 +121,8 @@
 </template>
 
 <script setup>
+import { openMail } from '../utils/mailto.js'
+
 defineProps({
   companyName: {
     type: String,

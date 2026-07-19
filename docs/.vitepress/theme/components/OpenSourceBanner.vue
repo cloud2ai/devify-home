@@ -14,6 +14,12 @@
             <span class="oss-highlight">{{ headingLine2 }}</span>
           </h2>
           <p class="oss-desc">{{ description }}</p>
+          <div v-if="modelNote" class="oss-model-note">
+            <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+            </svg>
+            <span>{{ modelNote }}</span>
+          </div>
           <div class="oss-actions">
             <a :href="githubUrl" target="_blank" rel="noopener" class="oss-btn-primary">
               <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -36,11 +42,11 @@
             </div>
             <pre class="code-body"><span class="c-purple">@webhook_handler</span>
 <span class="c-blue">def</span> <span class="c-green">process_email</span>(email):
-    <span class="c-gray"># AI 解析邮件内容</span>
+    <span class="c-gray"># {{ codeComment1 }}</span>
     content = <span class="c-green">extract_content</span>(email)
     images = <span class="c-green">parse_attachments</span>(email)
 
-    <span class="c-gray"># 调用 AI 分析</span>
+    <span class="c-gray"># {{ codeComment2 }}</span>
     result = <span class="c-green">ai_analyze</span>(
         text=content,
         images=images
@@ -74,6 +80,18 @@ defineProps({
   description: {
     type: String,
     default: 'The full processing pipeline — AI analysis, email ingestion, webhook handling — is open and auditable. Self-host it, inspect it, or contribute improvements.'
+  },
+  modelNote: {
+    type: String,
+    default: 'No vendor lock-in on the model layer — bring anything from mainstream commercial models to affordable open alternatives like DeepSeek or Qwen, and switch anytime.'
+  },
+  codeComment1: {
+    type: String,
+    default: 'parse email content'
+  },
+  codeComment2: {
+    type: String,
+    default: 'run AI analysis'
   },
   viewRepoText: {
     type: String,
@@ -164,6 +182,25 @@ defineProps({
   font-size: 1rem;
   line-height: 1.7;
   margin-bottom: 1.75rem;
+}
+
+.oss-model-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  padding: 0.85rem 1rem;
+  margin-bottom: 1.75rem;
+  border-radius: 0.6rem;
+  background: rgba(129, 140, 248, 0.08);
+  border-left: 2px solid #818cf8;
+  color: #c7d2fe;
+  font-size: 0.85rem;
+  line-height: 1.6;
+}
+
+.oss-model-note svg {
+  color: #a5b4fc;
+  margin-top: 0.15rem;
 }
 
 .oss-actions {

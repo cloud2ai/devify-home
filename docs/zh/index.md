@@ -7,10 +7,10 @@ import Hero from '../.vitepress/theme/components/Hero.vue'
 import Features from '../.vitepress/theme/components/Features.vue'
 import HowItWorks from '../.vitepress/theme/components/HowItWorks.vue'
 import WeChatGuide from '../.vitepress/theme/components/WeChatGuide.vue'
-import SocialProof from '../.vitepress/theme/components/SocialProof.vue'
 import UseCases from '../.vitepress/theme/components/UseCases.vue'
 import OpenSourceBanner from '../.vitepress/theme/components/OpenSourceBanner.vue'
 import Pricing from '../.vitepress/theme/components/Pricing.vue'
+import ContactSection from '../.vitepress/theme/components/ContactSection.vue'
 import Footer from '../.vitepress/theme/components/Footer.vue'
 
 const heroData = {
@@ -292,7 +292,37 @@ const pricingData = {
       additionalInfo: '适合企业级数据量，图文结合分析，所有沟通记录永久留存。'
     }
   ],
-  note: '所有付费方案均可随时升降级，按月计费，随时取消，无任何违约金。'
+  note: '所有付费方案均可随时升降级，按月计费，随时取消，无任何违约金。',
+  contactCta: {
+    title: '需要私有化部署？',
+    description: '数据合规、定制规模，或完全私有的运行环境——欢迎聊聊你的需求。',
+    buttonText: '联系我们',
+    mailto: { user: 'opensource', domain: 'oneprocloud.com', subject: '私有化部署咨询' }
+  }
+}
+
+const contactData = {
+  title: '联系我们',
+  subtitle: '两个邮箱，两种用途——找到对的那个。',
+  ctaLabel: '发送邮件',
+  items: [
+    {
+      icon: 'deploy',
+      title: '开源部署咨询',
+      description: '打算自己部署 Devify？我们可以帮你规划方案。',
+      user: 'opensource',
+      domain: 'oneprocloud.com',
+      subject: '开源部署咨询'
+    },
+    {
+      icon: 'support',
+      title: '技术支持',
+      description: '账户或产品使用中遇到问题？联系我们的支持团队。',
+      user: 'support',
+      domain: 'oneprocloud.com',
+      subject: '技术支持请求'
+    }
+  ]
 }
 
 const footerData = {
@@ -301,7 +331,7 @@ const footerData = {
   copyright: '',
   productTitle: '产品',
   resourceTitle: '资源',
-  companyTitle: '',
+  companyTitle: '联系我们',
   aboutTitle: '关于',
   socialLinks: [
     { icon: 'github', url: 'https://github.com/cloud2ai/devify', name: 'GitHub' }
@@ -314,7 +344,10 @@ const footerData = {
     { text: '常见问题', url: '/zh/faq' },
     { text: '微信备份指南', url: '/zh/guide/wechat-backup' }
   ],
-  companyLinks: [],
+  companyLinks: [
+    { text: '开源部署咨询', mailto: { user: 'opensource', domain: 'oneprocloud.com' } },
+    { text: '技术支持', mailto: { user: 'support', domain: 'oneprocloud.com' } }
+  ],
   aboutLinks: [
     { text: '关于我们', url: '/zh/about' }
   ],
@@ -326,12 +359,6 @@ const footerData = {
 </script>
 
 <Hero v-bind="heroData" />
-<SocialProof :items="[
-  { icon: '💬', value: '4 个平台', label: '微信 · 邮件 · WhatsApp · SMTP' },
-  { icon: '🤖', value: 'AI 全解析', label: '图片 · 文字 · 截图 · 附件' },
-  { icon: '♾️', value: '永久保存', label: 'Pro 方案数据永不过期' },
-  { icon: '🔓', value: '完全开源', label: '代码透明可自部署' },
-]" />
 <Features v-bind="featuresData" />
 <WeChatGuide />
 <HowItWorks v-bind="howItWorksData" />
@@ -343,7 +370,11 @@ const footerData = {
   heading-line1="AImyChats 背后的引擎"
   heading-line2="Devify 已在 GitHub 开源"
   description="核心处理逻辑、AI 分析流程、邮件接收系统全部代码公开透明。你可以自己部署、审查代码，也可以为项目贡献改进。"
+  model-note="不受任何模型厂商锁定——从主流商业模型到 DeepSeek、通义千问等开源模型，均可自由选择、随时切换。"
+  code-comment1="AI 解析邮件内容"
+  code-comment2="调用 AI 分析"
   view-repo-text="查看 GitHub 仓库"
   star-text="给项目 Star"
 />
+<ContactSection v-bind="contactData" />
 <Footer v-bind="footerData" />
